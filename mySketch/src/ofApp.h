@@ -2,8 +2,14 @@
 
 #include "ofMain.h"
 #include "SQLiteCpp.h"
+#include "EEGPlot.h"
 
-class ofApp : public ofBaseApp{
+const int FRAME_RATE = 60;
+const int EEG_RATE = 5000;
+const int WIDTH = 1024;
+const int HEIGHT = 768;
+
+class ofApp : public ofBaseApp {
 
 	public:
 		void setup();
@@ -24,5 +30,12 @@ class ofApp : public ofBaseApp{
 
     private:
         SQLite::Statement* _query;
+        int _eegPerFrame;
+        int _eegPerLastFrame;
+        bool _queryDone;
+        int _x =  WIDTH / -2;
+
+        EEGPlot* _eegPlot;
+
 		
 };

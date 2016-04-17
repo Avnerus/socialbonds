@@ -1,1 +1,2 @@
 ofxSQLiteCpp
+ofxHistoryPlot

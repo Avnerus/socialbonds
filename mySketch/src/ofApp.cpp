@@ -3,8 +3,19 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
 
-    ofSetFrameRate(30);
     ofEnableAlphaBlending();
+    ofEnableSmoothing();
+    ofSetBackgroundColor(0,0,0);
+    ofSetColor(255,255,255); 
+    ofSetBackgroundAuto(false);
+    ofSetVerticalSync(true);
+
+    ofSetFrameRate(FRAME_RATE);
+
+    _eegPerFrame = EEG_RATE / FRAME_RATE;
+    _eegPerLastFrame = EEG_RATE / FRAME_RATE + (EEG_RATE % FRAME_RATE);
+
+    std::cout << "EEG Samples per frame: " << _eegPerFrame << ". Last frame: " << _eegPerLastFrame << endl;
 
     try {
 
@@ -14,12 +25,16 @@ void ofApp::setup(){
         SQLite::Database db(eegDB);
 
         _query = new SQLite::Statement(db, "SELECT * from data");
-    }
+        _queryDone = false;
 
+    }
 
     catch (std::exception& e) {
         ofLogError() << "exception: " << e.what();
     }
+
+    _eegPlot = new EEGPlot();
+    _eegPlot->setup();
 
 
 }
@@ -27,13 +42,26 @@ void ofApp::setup(){
 //--------------------------------------------------------------
 void ofApp::update(){
 
+    std::stringstream strm;
+	strm << "fps: " << ofGetFrameRate();
+	ofSetWindowTitle(strm.str());
+
+    for (int i = 0; i < _eegPerFrame && !_queryDone; i++) {
+        if (_query->executeStep()) {
+            double value = _query->getColumn(1);
+            value *= 5000.0;
+            _eegPlot->update(value);
+        } else {
+            _queryDone = true;
+        }
+    }
+
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-    _query->executeStep();
-    double value = _query->getColumn(1);
-    std::cout << value << endl;
+
+    _eegPlot->draw();
 }
 
 //--------------------------------------------------------------
@@ -58,12 +86,12 @@ void ofApp::mouseDragged(int x, int y, int button){
 
 //--------------------------------------------------------------
 void ofApp::mousePressed(int x, int y, int button){
-
+    _eegPlot->mouseIsPressed = true;
 }
 
 //--------------------------------------------------------------
 void ofApp::mouseReleased(int x, int y, int button){
-
+    _eegPlot->mouseIsPressed = false;
 }
 
 //--------------------------------------------------------------
