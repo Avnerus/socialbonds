@@ -12,6 +12,8 @@ void ofApp::setup(){
 
     ofSetFrameRate(FRAME_RATE);
 
+    ofSetLogLevel(OF_LOG_VERBOSE);
+
     _eegPerFrame = EEG_RATE / FRAME_RATE;
     _eegPerLastFrame = EEG_RATE / FRAME_RATE + (EEG_RATE % FRAME_RATE);
 
@@ -37,10 +39,43 @@ void ofApp::setup(){
     _eegPlot->setup();
 
 
+    _nowRecording = false;
+
+    if(_nowRecording) {
+        
+        _rgbFbo.allocate(WIDTH, HEIGHT, GL_RGB32F_ARB); 
+        _rgbFbo.begin();
+            ofClear(0,0,0);
+        _rgbFbo.end();
+        _pix.allocate(WIDTH,HEIGHT,OF_PIXELS_RGB);
+        
+        
+        ofAddListener(vidRecorder.outputFileCompleteEvent, this, &ofApp::recordingComplete);
+
+        //vidRecorder.setup("testeeg.mov", WIDTH, HEIGHT, 30);
+            
+        // Start recording
+        //vidRecorder.start();
+    }
+
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
+    /*
+
+    if(_nowRecording){
+        _rgbFbo.begin();
+        // Check if the video recorder encountered any error while writing video frame or audio smaples.
+        if (vidRecorder.hasVideoError()) {
+            ofLogWarning("The video recorder failed to write some frames!");
+        }
+        
+        if (vidRecorder.hasAudioError()) {
+            ofLogWarning("The video recorder failed to write some audio samples!");
+        }
+    }*/
+    
 
     std::stringstream strm;
 	strm << "fps: " << ofGetFrameRate();
@@ -61,7 +96,15 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
 
+
     _eegPlot->draw();
+/*
+    if (_nowRecording) {
+        _rgbFbo.end();
+        _rgbFbo.draw(0,0);
+        _rgbFbo.readToPixels(_pix);
+        vidRecorder.addFrame(_pix);
+    }*/
 }
 
 //--------------------------------------------------------------
@@ -71,6 +114,8 @@ void ofApp::keyPressed(int key){
 
 //--------------------------------------------------------------
 void ofApp::keyReleased(int key){
+    vidRecorder.close();
+    _nowRecording = false;
 
 }
 
@@ -117,4 +162,14 @@ void ofApp::gotMessage(ofMessage msg){
 //--------------------------------------------------------------
 void ofApp::dragEvent(ofDragInfo dragInfo){ 
 
+}
+
+void ofApp::exit(){
+    std::cout << "EXIT" << std::endl;
+    ofRemoveListener(vidRecorder.outputFileCompleteEvent, this, &ofApp::recordingComplete);
+    vidRecorder.close();
+}
+
+void ofApp::recordingComplete(ofxVideoRecorderOutputFileCompleteEventArgs& args){
+    std::cout << "The recoded video file is now complete." << std::endl;
 }
