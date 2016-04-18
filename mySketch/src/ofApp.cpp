@@ -12,7 +12,7 @@ void ofApp::setup(){
 
     ofSetFrameRate(FRAME_RATE);
 
-    ofSetLogLevel(OF_LOG_VERBOSE);
+    //ofSetLogLevel(OF_LOG_VERBOSE);
 
     _eegPerFrame = EEG_RATE / FRAME_RATE;
     _eegPerLastFrame = EEG_RATE / FRAME_RATE + (EEG_RATE % FRAME_RATE);
@@ -39,7 +39,7 @@ void ofApp::setup(){
     _eegPlot->setup();
 
 
-    _nowRecording = false;
+    _nowRecording = true;
 
     if(_nowRecording) {
         
@@ -52,17 +52,18 @@ void ofApp::setup(){
         
         ofAddListener(vidRecorder.outputFileCompleteEvent, this, &ofApp::recordingComplete);
 
-        //vidRecorder.setup("testeeg.mov", WIDTH, HEIGHT, 30);
+        vidRecorder.setVideoCodec("h264"); 
+        vidRecorder.setVideoBitrate("4000k");
+        vidRecorder.setup("testeeg.mov", WIDTH, HEIGHT, 30);
             
         // Start recording
-        //vidRecorder.start();
+        vidRecorder.start();
     }
 
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
-    /*
 
     if(_nowRecording){
         _rgbFbo.begin();
@@ -74,7 +75,7 @@ void ofApp::update(){
         if (vidRecorder.hasAudioError()) {
             ofLogWarning("The video recorder failed to write some audio samples!");
         }
-    }*/
+    }
     
 
     std::stringstream strm;
@@ -98,13 +99,13 @@ void ofApp::draw(){
 
 
     _eegPlot->draw();
-/*
+
     if (_nowRecording) {
         _rgbFbo.end();
         _rgbFbo.draw(0,0);
         _rgbFbo.readToPixels(_pix);
         vidRecorder.addFrame(_pix);
-    }*/
+    }
 }
 
 //--------------------------------------------------------------

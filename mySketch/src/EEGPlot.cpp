@@ -2,7 +2,7 @@
 
 void EEGPlot::setup() {
 	mouseIsPressed = false;
-	int numSamples = 15000;
+	int numSamples = 1000;
 	
 
 	plot = new ofxHistoryPlot( NULL, "Soujanyaa's Brain", numSamples, false);	
