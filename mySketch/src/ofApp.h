@@ -8,8 +8,8 @@
 
 const int FRAME_RATE = 60;
 const int EEG_RATE = 5000;
-const int WIDTH = 1024;
-const int HEIGHT = 768;
+const int WIDTH = 1920;
+const int HEIGHT = 1080;
 const int REC_SAMPLE_RATE  = 44100;
 const int REC_CHANNELS = 2;
 
@@ -49,7 +49,4 @@ class ofApp : public ofBaseApp {
         ofPixels _pix;
 
         bool _nowRecording;
-
-
-		
 };

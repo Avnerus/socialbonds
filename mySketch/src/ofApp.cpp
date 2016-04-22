@@ -38,6 +38,12 @@ void ofApp::setup(){
     _eegPlot = new EEGPlot();
     _eegPlot->setup();
 
+    int y = 10;
+    for (int i = 0; i < 26; i++) {
+        _eegPlot->appendChannel(10, y);
+        y += 40;
+    }
+
 
     _nowRecording = true;
 
@@ -81,12 +87,20 @@ void ofApp::update(){
     std::stringstream strm;
 	strm << "fps: " << ofGetFrameRate();
 	ofSetWindowTitle(strm.str());
+    int numToRead = _eegPerFrame;
 
-    for (int i = 0; i < _eegPerFrame && !_queryDone; i++) {
+    if (ofGetFrameNum() % 59 == 0) {
+        numToRead = _eegPerLastFrame;
+    }
+
+
+    for (int i = 0; i < numToRead && !_queryDone; i++) {
         if (_query->executeStep()) {
-            double value = _query->getColumn(1);
-            value *= 5000.0;
-            _eegPlot->update(value);
+            for (int channel = 0; channel < 26; channel++) {
+                double value = _query->getColumn(channel);
+                value *= 5000.0;
+                _eegPlot->update(channel,value);
+            }
         } else {
             _queryDone = true;
         }

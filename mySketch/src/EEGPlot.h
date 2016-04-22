@@ -2,13 +2,20 @@
 #include "ofMain.h"
 #include "ofxHistoryPlot.h"
 
+struct Channel {
+    ofxHistoryPlot* plot;
+    int x;
+    int y;
+};
+
 class EEGPlot {
     public:
         void setup();
-        void update(float value);
+        void update(int index, float value);
         void draw();
+        void appendChannel(int x, int y);
 
-        ofxHistoryPlot * plot; //manual
+        vector<Channel> channels;
 
         bool mouseIsPressed;
         float currentFrameRate;
