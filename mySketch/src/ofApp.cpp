@@ -116,9 +116,10 @@ void ofApp::draw(){
 
     if (_nowRecording) {
         _rgbFbo.end();
-        _rgbFbo.draw(0,0);
         _rgbFbo.readToPixels(_pix);
+        _pix.mirror(true, false);
         vidRecorder.addFrame(_pix);
+        _rgbFbo.draw(0,0);
     }
 }
 
