@@ -45,7 +45,7 @@ void ofApp::setup(){
     }
 
 
-    _nowRecording = true;
+    _nowRecording = false;
 
     if(_nowRecording) {
         
