@@ -48,5 +48,8 @@ class ofApp : public ofBaseApp {
         ofFbo _rgbFbo;
         ofPixels _pix;
 
+        float _eyeX;
+        float _eyeY;
+
         bool _nowRecording;
 };

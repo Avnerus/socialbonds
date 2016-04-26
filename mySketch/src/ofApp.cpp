@@ -7,7 +7,6 @@ void ofApp::setup(){
     ofEnableSmoothing();
     ofSetBackgroundColor(0,0,0);
     ofSetColor(255,255,255); 
-    ofSetBackgroundAuto(false);
     ofSetVerticalSync(true);
 
     ofSetFrameRate(FRAME_RATE);
