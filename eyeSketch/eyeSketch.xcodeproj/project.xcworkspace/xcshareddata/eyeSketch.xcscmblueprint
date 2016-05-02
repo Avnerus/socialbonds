@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "D7BD5E50F1992067E519EC37976C7921CC13709E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "D7BD5E50F1992067E519EC37976C7921CC13709E" : 0,
+    "A82C0ABFD7ACBB96A8DACF462A005A3A654155C7" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "2642FB66-BF56-4CE4-9E2D-19037D39CA1C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "D7BD5E50F1992067E519EC37976C7921CC13709E" : "socialbonds\/",
+    "A82C0ABFD7ACBB96A8DACF462A005A3A654155C7" : "..\/of_v0.9.3_osx_release\/addons\/ofxSQLiteCpp"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "eyeSketch",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "eyeSketch\/eyeSketch.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/bakercp\/ofxSQLiteCpp",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A82C0ABFD7ACBB96A8DACF462A005A3A654155C7"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/avnerus\/socialbonds",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D7BD5E50F1992067E519EC37976C7921CC13709E"
+    }
+  ]
+}

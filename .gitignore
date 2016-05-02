@@ -31,3 +31,6 @@
 bin
 obj
 *.swp
+
+venv
+.DS_Store

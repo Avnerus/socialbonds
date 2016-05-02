@@ -6,20 +6,23 @@ void ofApp::setup(){
     ofEnableAlphaBlending();
     ofEnableSmoothing();
     ofSetBackgroundColor(0,0,0);
-    ofSetBackgroundAuto(false);
+    //ofSetBackgroundAuto(false);
     ofSetVerticalSync(true);
     ofSetFullscreen(true);
 
     ofSetFrameRate(FRAME_RATE);
+    
+    std::string eyeDBPath  = ofToDataPath("pouyan_eyedata.db", true);
 
     try {
 
+        _eyeDB = new SQLite::Database(eyeDBPath);
+        
         // Open EyeLink Dataset
-        std::string eyeDB  = ofToDataPath("eyedata.db", true);
+        // std::string eyeDB  = ofToDataPath("eyedata.db", true);
 
-        SQLite::Database db(eyeDB);
 
-        _query = new SQLite::Statement(db, "SELECT * from data");
+        _query = new SQLite::Statement(*(_eyeDB), "SELECT * from data");
         _queryDone = false;
 
     }
@@ -33,7 +36,8 @@ void ofApp::setup(){
 
     std::cout << "EYE Samples per frame: " << _eyePerFrame << ". Last frame: " << _eyePerLastFrame << endl;
 
-    _player.load("/run/media/avnerus/66220716265174D3/Facebook Piot Experiment/Video/pilotexp.mp4");
+  //  _player.load("/run/media/avnerus/66220716265174D3/Facebook Piot Experiment/Video/pilotexp.mp4");
+    _player.load("/Volumes/Store/Avner/POUYAN-BRAIN/pouyan_cropped.mp4");
     _player.play();
 
 }

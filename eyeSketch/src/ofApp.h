@@ -31,6 +31,7 @@ class ofApp : public ofBaseApp{
         ofVideoPlayer _player;
         bool _queryDone;
         SQLite::Statement* _query;
+        SQLite::Database* _eyeDB;
         int _eyePerFrame;
         int _eyePerLastFrame;
 
