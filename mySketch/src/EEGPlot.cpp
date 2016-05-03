@@ -34,6 +34,6 @@ void EEGPlot::update(int index, float value) {
 
 void EEGPlot::draw() {
     for (int i=0; i < channels.size(); i++) {
-        channels[i].plot->draw(channels[i].x, channels[i].y, 1920, 100);
+        channels[i].plot->draw(channels[i].x, channels[i].y, 1900, 100);
     }
 }

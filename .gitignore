@@ -34,3 +34,5 @@ obj
 
 venv
 .DS_Store
+
+*.db

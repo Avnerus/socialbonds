@@ -7,32 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07D98F6256F1822711870096 /* ofxOscParameterSync.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7D17733FD1A930991E2CA29 /* ofxOscParameterSync.cpp */; };
-		0E5D2CDD73064BF4E200008E /* ofxOscMessage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F13767DBB0C16065B3F734E4 /* ofxOscMessage.cpp */; };
-		137FC51A79CF25B9F896B330 /* NetworkingUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AA97DC23A572F47E4BC45BC8 /* NetworkingUtils.cpp */; };
-		174F11FA534B347592169E06 /* Statement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2EC15D41E47280A1DD29389C /* Statement.cpp */; };
-		1FE5B9320F517F3021D6BEB7 /* ofxHistoryPlot.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9420E516A7430AC135DEEE70 /* ofxHistoryPlot.cpp */; };
-		2CEEF56663696A0AF582C3B8 /* Backup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7E0209FFAA7C504644FB2C02 /* Backup.cpp */; };
-		3E653BDF7B7FFB22364AB797 /* ofxVideoRecorder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A00BCF5BCF3270FB9CAF883B /* ofxVideoRecorder.cpp */; };
-		45E72E7090A5E8E2EE4952E8 /* Column.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0578F106131841E43A178EA /* Column.cpp */; };
-		48AFC243C96B9B69375AC5F9 /* OscPrintReceivedElements.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8604A2B347D6D94E9330A459 /* OscPrintReceivedElements.cpp */; };
-		6B562A440C5ADEC1E2294113 /* UdpSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 455E4754FFE2E31AE49AB3FE /* UdpSocket.cpp */; };
-		7C8A7FBA253B65D181C3EC02 /* Transaction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C84EFE91601DF0F045E4FCCF /* Transaction.cpp */; };
+		06CDDE1E90B32C44EBD60202 /* OscTypes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B2B8051D27FA0B0830B45D4 /* OscTypes.cpp */; };
+		0CE92797F0951E511964B1FE /* SQLiteCppUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCF815FE83CDF6F8ABE6945D /* SQLiteCppUtils.cpp */; };
+		0DFEDAB0756C10BD4E935C21 /* ofxOscSender.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D815EF4613B7BABDE5319445 /* ofxOscSender.cpp */; };
+		12AEB03D699C545BDB79C835 /* UdpSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBC4900F3C911F3F8E955D13 /* UdpSocket.cpp */; };
+		19C8477B095795D2B05D465F /* ofxOscMessage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98B7AB643059FA5A48C50132 /* ofxOscMessage.cpp */; };
+		31835A90AD98F4E04BC6EED6 /* IpEndpointName.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93FAADBF70E4B8CFF3FCCB17 /* IpEndpointName.cpp */; };
+		31AF6BBE339010D566F7AC37 /* ofxOscReceiver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DDE865F7FB179B80C2DBD13A /* ofxOscReceiver.cpp */; };
+		325A4A38195F9C5852A4605F /* Statement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BD7BCA886CC334212467705D /* Statement.cpp */; };
+		3382FE88732289E4000E36C2 /* ofxHistoryPlot.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C178DDA187597BF57388E71C /* ofxHistoryPlot.cpp */; };
+		47E4D724FAE6450A382EFED0 /* OscReceivedElements.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A9865B76993E58A7C5C1A19 /* OscReceivedElements.cpp */; };
+		4F4285CE2433133BC6FD5DEC /* Database.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B057426B787220D6F9DCA84 /* Database.cpp */; };
+		55171B0B1B75F82824E60EE7 /* Backup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C12330F3349081F7B99F9224 /* Backup.cpp */; };
+		5D2C30CF96A15AE2D9793C63 /* ofxVideoRecorder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 628FE1FC6833D249D5B83C79 /* ofxVideoRecorder.cpp */; };
+		5E892C2E3249A8312763D414 /* OscPrintReceivedElements.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E51D0019531F5069E57F681E /* OscPrintReceivedElements.cpp */; };
 		8338FC4DF2349D07EEECB164 /* EEGPlot.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 61A3667C0587E04DFCF991EF /* EEGPlot.cpp */; };
-		AC481D349D653C8EAAD0CC50 /* Database.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AB4BF7F9261EBBEE9536CFD /* Database.cpp */; };
-		B65E5F1352A100697D4709E5 /* OscOutboundPacketStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 244A884A93F941270488F82A /* OscOutboundPacketStream.cpp */; };
-		BD8A8B5B2495DA10A1CA7602 /* ofxOscReceiver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4AD77DBDFA3C3F5F138BA583 /* ofxOscReceiver.cpp */; };
-		C4EACF53C3F193A3F5C9F9A1 /* OscTypes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C65B07902CC74C9909B5F47 /* OscTypes.cpp */; };
-		DA6CDF7168E0F3D429D0E813 /* SQLiteCppUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D941938C18AB7CE1734C9491 /* SQLiteCppUtils.cpp */; };
-		DE1A5EAD16C1D41A79F84C62 /* OscReceivedElements.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1474088FECD26A4FCFADA226 /* OscReceivedElements.cpp */; };
+		86B715626F5235FBD16BA3BC /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = D25C811DB2E35E08F138B5E7 /* sqlite3.c */; };
+		AAD5D0321E961E173C3CEED4 /* ofxOscBundle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4FFD0684361327A5088FFBAE /* ofxOscBundle.cpp */; };
+		AC8D7A7CFE55E69365E40505 /* OscOutboundPacketStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EBC120FBAC2DC1FF84845A5F /* OscOutboundPacketStream.cpp */; };
+		BF2FFC62B5DCECB22321D0BE /* ofxOscParameterSync.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFB6E4AE35EB831D18A92954 /* ofxOscParameterSync.cpp */; };
+		CA0199A9397CB983C7BE5179 /* Transaction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 41EF3634A1442EB47E8502F8 /* Transaction.cpp */; };
+		D4005489016C2E2E19FAF4C2 /* Column.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0FE7F1EE9361E8855E8FE6F /* Column.cpp */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
 		E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1D0A3A1BDC003C02F2 /* main.cpp */; };
 		E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */; };
-		E91FD5EC72E49EBB96FA891D /* IpEndpointName.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DAF081F18EE72592C7C18162 /* IpEndpointName.cpp */; };
-		F39645BDF0E336000C1F38E8 /* ofxOscSender.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEF994D9489010D1243F0A52 /* ofxOscSender.cpp */; };
-		F497983C61C790425A390009 /* ofxOscBundle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 51259A128C2FABE7EFC7A5B9 /* ofxOscBundle.cpp */; };
 		FAC0B5AAC067761BB1359EFC /* EEGSound.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7DA5CA454A4972B9926D2E4F /* EEGSound.cpp */; };
-		FD060B4833602363D6731C68 /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F858E64A4E56722AF3BA749 /* sqlite3.c */; };
+		FCE10A04E1165CB8A6CDCBD0 /* NetworkingUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8F42577660C466DF5F4B5AB /* NetworkingUtils.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,71 +65,71 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		07AB87917DBD3CFE20613619 /* OscReceivedElements.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OscReceivedElements.h; path = ../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/osc/OscReceivedElements.h; sourceTree = SOURCE_ROOT; };
-		0BD1F10221BEEA8C6D6355CC /* OscHostEndianness.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OscHostEndianness.h; path = ../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/osc/OscHostEndianness.h; sourceTree = SOURCE_ROOT; };
+		09DF8072FD7355D171AA0F31 /* ofxOscReceiver.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxOscReceiver.h; path = ../../../of_v0.9.3_osx_release/addons/ofxOsc/src/ofxOscReceiver.h; sourceTree = SOURCE_ROOT; };
+		0F54EE25B9B27FFDBF94D20F /* OscOutboundPacketStream.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OscOutboundPacketStream.h; path = ../../../of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/osc/OscOutboundPacketStream.h; sourceTree = SOURCE_ROOT; };
 		11C86DA288F844097ED8C320 /* EEGSound.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = EEGSound.h; path = src/EEGSound.h; sourceTree = SOURCE_ROOT; };
-		12A61862A4AB9AEA277FDF65 /* sqlite3.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = sqlite3.h; path = ../../../Code/of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/sqlite3/sqlite3.h; sourceTree = SOURCE_ROOT; };
-		1474088FECD26A4FCFADA226 /* OscReceivedElements.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = OscReceivedElements.cpp; path = ../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/osc/OscReceivedElements.cpp; sourceTree = SOURCE_ROOT; };
-		244A884A93F941270488F82A /* OscOutboundPacketStream.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = OscOutboundPacketStream.cpp; path = ../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/osc/OscOutboundPacketStream.cpp; sourceTree = SOURCE_ROOT; };
-		27BA92DD0033BD38FB3F5E6A /* ofxOscMessage.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxOscMessage.h; path = ../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/src/ofxOscMessage.h; sourceTree = SOURCE_ROOT; };
-		2EC15D41E47280A1DD29389C /* Statement.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Statement.cpp; path = ../../../Code/of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/src/Statement.cpp; sourceTree = SOURCE_ROOT; };
-		3C21F70B0914DFA1D265D296 /* ofxVideoRecorder.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxVideoRecorder.h; path = ../../../Code/of_v0.9.3_osx_release/addons/ofxVideoRecorder/src/ofxVideoRecorder.h; sourceTree = SOURCE_ROOT; };
-		3C65B07902CC74C9909B5F47 /* OscTypes.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = OscTypes.cpp; path = ../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/osc/OscTypes.cpp; sourceTree = SOURCE_ROOT; };
-		3D5833FC112914682400E7D4 /* OscOutboundPacketStream.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OscOutboundPacketStream.h; path = ../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/osc/OscOutboundPacketStream.h; sourceTree = SOURCE_ROOT; };
-		41CD0AC784261E5E78753142 /* TimerListener.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = TimerListener.h; path = ../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/ip/TimerListener.h; sourceTree = SOURCE_ROOT; };
-		43B0BC27EF6F2752EE126E56 /* ofxOscArg.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxOscArg.h; path = ../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/src/ofxOscArg.h; sourceTree = SOURCE_ROOT; };
-		455E4754FFE2E31AE49AB3FE /* UdpSocket.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = UdpSocket.cpp; path = ../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/ip/posix/UdpSocket.cpp; sourceTree = SOURCE_ROOT; };
-		4AD77DBDFA3C3F5F138BA583 /* ofxOscReceiver.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxOscReceiver.cpp; path = ../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/src/ofxOscReceiver.cpp; sourceTree = SOURCE_ROOT; };
-		4FEF81DCA414362E16B00324 /* OscPacketListener.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OscPacketListener.h; path = ../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/osc/OscPacketListener.h; sourceTree = SOURCE_ROOT; };
-		51259A128C2FABE7EFC7A5B9 /* ofxOscBundle.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxOscBundle.cpp; path = ../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/src/ofxOscBundle.cpp; sourceTree = SOURCE_ROOT; };
-		51AA591C66CA87A37FECD36E /* OscTypes.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OscTypes.h; path = ../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/osc/OscTypes.h; sourceTree = SOURCE_ROOT; };
-		5399AC15F6145E71D6C1BC71 /* ofxOscParameterSync.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxOscParameterSync.h; path = ../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/src/ofxOscParameterSync.h; sourceTree = SOURCE_ROOT; };
-		53A87660D6020CE8D6519D16 /* OscPrintReceivedElements.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OscPrintReceivedElements.h; path = ../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/osc/OscPrintReceivedElements.h; sourceTree = SOURCE_ROOT; };
+		234DC41C163CCA178550E701 /* MessageMappingOscPacketListener.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = MessageMappingOscPacketListener.h; path = ../../../of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/osc/MessageMappingOscPacketListener.h; sourceTree = SOURCE_ROOT; };
+		2C02E386EBA89216B14FFB28 /* Database.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Database.h; path = ../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/include/SQLiteCpp/Database.h; sourceTree = SOURCE_ROOT; };
+		318AFDA072B1D03737F15A81 /* ofxOscBundle.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxOscBundle.h; path = ../../../of_v0.9.3_osx_release/addons/ofxOsc/src/ofxOscBundle.h; sourceTree = SOURCE_ROOT; };
+		41EF3634A1442EB47E8502F8 /* Transaction.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Transaction.cpp; path = ../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/src/Transaction.cpp; sourceTree = SOURCE_ROOT; };
+		423A334A5667EAF4D770B7E0 /* ofxOscArg.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxOscArg.h; path = ../../../of_v0.9.3_osx_release/addons/ofxOsc/src/ofxOscArg.h; sourceTree = SOURCE_ROOT; };
+		4A9865B76993E58A7C5C1A19 /* OscReceivedElements.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = OscReceivedElements.cpp; path = ../../../of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/osc/OscReceivedElements.cpp; sourceTree = SOURCE_ROOT; };
+		4B057426B787220D6F9DCA84 /* Database.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Database.cpp; path = ../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/src/Database.cpp; sourceTree = SOURCE_ROOT; };
+		4FFD0684361327A5088FFBAE /* ofxOscBundle.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxOscBundle.cpp; path = ../../../of_v0.9.3_osx_release/addons/ofxOsc/src/ofxOscBundle.cpp; sourceTree = SOURCE_ROOT; };
+		5BF24BE7FCA72931A35F068B /* Column.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Column.h; path = ../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/include/SQLiteCpp/Column.h; sourceTree = SOURCE_ROOT; };
+		5CC5D3A1415AC2FE201A7927 /* ofxOsc.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxOsc.h; path = ../../../of_v0.9.3_osx_release/addons/ofxOsc/src/ofxOsc.h; sourceTree = SOURCE_ROOT; };
 		61A3667C0587E04DFCF991EF /* EEGPlot.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = EEGPlot.cpp; path = src/EEGPlot.cpp; sourceTree = SOURCE_ROOT; };
-		6510E0E939990902E98267C3 /* OscException.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OscException.h; path = ../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/osc/OscException.h; sourceTree = SOURCE_ROOT; };
-		65E9926688639FF94B1AE810 /* ofxOscBundle.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxOscBundle.h; path = ../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/src/ofxOscBundle.h; sourceTree = SOURCE_ROOT; };
+		628FE1FC6833D249D5B83C79 /* ofxVideoRecorder.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxVideoRecorder.cpp; path = ../../../of_v0.9.3_osx_release/addons/ofxVideoRecorder/src/ofxVideoRecorder.cpp; sourceTree = SOURCE_ROOT; };
+		6592BFCD3550F2954644FACB /* ofxOscParameterSync.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxOscParameterSync.h; path = ../../../of_v0.9.3_osx_release/addons/ofxOsc/src/ofxOscParameterSync.h; sourceTree = SOURCE_ROOT; };
+		6B2B8051D27FA0B0830B45D4 /* OscTypes.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = OscTypes.cpp; path = ../../../of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/osc/OscTypes.cpp; sourceTree = SOURCE_ROOT; };
+		6FF038062FC6A94ECE88F4B1 /* SQLiteCppUtils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SQLiteCppUtils.h; path = ../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/src/SQLiteCppUtils.h; sourceTree = SOURCE_ROOT; };
+		79FB12A8342F6309E6340E63 /* PacketListener.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = PacketListener.h; path = ../../../of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/ip/PacketListener.h; sourceTree = SOURCE_ROOT; };
+		7CD5163A01AFC732A72A8FDA /* SQLiteCpp.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SQLiteCpp.h; path = ../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/include/SQLiteCpp/SQLiteCpp.h; sourceTree = SOURCE_ROOT; };
 		7DA5CA454A4972B9926D2E4F /* EEGSound.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = EEGSound.cpp; path = src/EEGSound.cpp; sourceTree = SOURCE_ROOT; };
-		7E0209FFAA7C504644FB2C02 /* Backup.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Backup.cpp; path = ../../../Code/of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/src/Backup.cpp; sourceTree = SOURCE_ROOT; };
-		7F09F57F1AEEA20C78605FF0 /* SQLiteCppUtils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SQLiteCppUtils.h; path = ../../../Code/of_v0.9.3_osx_release/addons/ofxSQLiteCpp/src/SQLiteCppUtils.h; sourceTree = SOURCE_ROOT; };
-		8604A2B347D6D94E9330A459 /* OscPrintReceivedElements.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = OscPrintReceivedElements.cpp; path = ../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/osc/OscPrintReceivedElements.cpp; sourceTree = SOURCE_ROOT; };
-		86DF22187F4730A1F4A6703A /* ofxHistoryPlot.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxHistoryPlot.h; path = ../../../Code/of_v0.9.3_osx_release/addons/ofxHistoryPlot/src/ofxHistoryPlot.h; sourceTree = SOURCE_ROOT; };
-		8917B0482033B56AFBB1F983 /* Exception.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Exception.h; path = ../../../Code/of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/include/SQLiteCpp/Exception.h; sourceTree = SOURCE_ROOT; };
-		9420E516A7430AC135DEEE70 /* ofxHistoryPlot.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxHistoryPlot.cpp; path = ../../../Code/of_v0.9.3_osx_release/addons/ofxHistoryPlot/src/ofxHistoryPlot.cpp; sourceTree = SOURCE_ROOT; };
-		95588FFFE05888407D91522C /* Transaction.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Transaction.h; path = ../../../Code/of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/include/SQLiteCpp/Transaction.h; sourceTree = SOURCE_ROOT; };
-		9A02672C684981241E7B5CEB /* IpEndpointName.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = IpEndpointName.h; path = ../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/ip/IpEndpointName.h; sourceTree = SOURCE_ROOT; };
-		9AB4BF7F9261EBBEE9536CFD /* Database.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Database.cpp; path = ../../../Code/of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/src/Database.cpp; sourceTree = SOURCE_ROOT; };
-		9F858E64A4E56722AF3BA749 /* sqlite3.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 30; name = sqlite3.c; path = ../../../Code/of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/sqlite3/sqlite3.c; sourceTree = SOURCE_ROOT; };
-		A00BCF5BCF3270FB9CAF883B /* ofxVideoRecorder.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxVideoRecorder.cpp; path = ../../../Code/of_v0.9.3_osx_release/addons/ofxVideoRecorder/src/ofxVideoRecorder.cpp; sourceTree = SOURCE_ROOT; };
-		A4DAA7B6077EC05B82DE9D9E /* Backup.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Backup.h; path = ../../../Code/of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/include/SQLiteCpp/Backup.h; sourceTree = SOURCE_ROOT; };
-		A7D17733FD1A930991E2CA29 /* ofxOscParameterSync.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxOscParameterSync.cpp; path = ../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/src/ofxOscParameterSync.cpp; sourceTree = SOURCE_ROOT; };
-		AA97DC23A572F47E4BC45BC8 /* NetworkingUtils.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = NetworkingUtils.cpp; path = ../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/ip/posix/NetworkingUtils.cpp; sourceTree = SOURCE_ROOT; };
-		ABE7C1561CA8E9EF51D442CF /* MessageMappingOscPacketListener.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = MessageMappingOscPacketListener.h; path = ../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/osc/MessageMappingOscPacketListener.h; sourceTree = SOURCE_ROOT; };
-		B07342BEEAD9DA7DD0DB9015 /* Statement.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Statement.h; path = ../../../Code/of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/include/SQLiteCpp/Statement.h; sourceTree = SOURCE_ROOT; };
-		B305E62E93F11667BA6FCC27 /* Assertion.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Assertion.h; path = ../../../Code/of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/include/SQLiteCpp/Assertion.h; sourceTree = SOURCE_ROOT; };
-		C0578F106131841E43A178EA /* Column.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Column.cpp; path = ../../../Code/of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/src/Column.cpp; sourceTree = SOURCE_ROOT; };
-		C705CDFC83F2E64665EB9F39 /* NetworkingUtils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = NetworkingUtils.h; path = ../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/ip/NetworkingUtils.h; sourceTree = SOURCE_ROOT; };
-		C84EFE91601DF0F045E4FCCF /* Transaction.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Transaction.cpp; path = ../../../Code/of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/src/Transaction.cpp; sourceTree = SOURCE_ROOT; };
-		CDD05C855712E825239B3ED5 /* Database.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Database.h; path = ../../../Code/of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/include/SQLiteCpp/Database.h; sourceTree = SOURCE_ROOT; };
-		D941938C18AB7CE1734C9491 /* SQLiteCppUtils.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = SQLiteCppUtils.cpp; path = ../../../Code/of_v0.9.3_osx_release/addons/ofxSQLiteCpp/src/SQLiteCppUtils.cpp; sourceTree = SOURCE_ROOT; };
-		DAF081F18EE72592C7C18162 /* IpEndpointName.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = IpEndpointName.cpp; path = ../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/ip/IpEndpointName.cpp; sourceTree = SOURCE_ROOT; };
-		DEBA4C7478D269D649879B42 /* ofxOscReceiver.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxOscReceiver.h; path = ../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/src/ofxOscReceiver.h; sourceTree = SOURCE_ROOT; };
-		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../Code/of_v0.9.3_osx_release/libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
+		888FE7FAEF19D2ABC0315871 /* ofxOscSender.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxOscSender.h; path = ../../../of_v0.9.3_osx_release/addons/ofxOsc/src/ofxOscSender.h; sourceTree = SOURCE_ROOT; };
+		90E0CC5DE6C30094C4657E45 /* UdpSocket.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = UdpSocket.h; path = ../../../of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/ip/UdpSocket.h; sourceTree = SOURCE_ROOT; };
+		93FAADBF70E4B8CFF3FCCB17 /* IpEndpointName.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = IpEndpointName.cpp; path = ../../../of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/ip/IpEndpointName.cpp; sourceTree = SOURCE_ROOT; };
+		9666F457B9C6B332B911409C /* sqlite3.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = sqlite3.h; path = ../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/sqlite3/sqlite3.h; sourceTree = SOURCE_ROOT; };
+		98B7AB643059FA5A48C50132 /* ofxOscMessage.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxOscMessage.cpp; path = ../../../of_v0.9.3_osx_release/addons/ofxOsc/src/ofxOscMessage.cpp; sourceTree = SOURCE_ROOT; };
+		993B7296159B52F82AA51462 /* Assertion.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Assertion.h; path = ../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/include/SQLiteCpp/Assertion.h; sourceTree = SOURCE_ROOT; };
+		9BD27B173E0FFDA7A472225B /* TimerListener.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = TimerListener.h; path = ../../../of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/ip/TimerListener.h; sourceTree = SOURCE_ROOT; };
+		9BE47DBEA4A4A17064EE441E /* OscTypes.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OscTypes.h; path = ../../../of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/osc/OscTypes.h; sourceTree = SOURCE_ROOT; };
+		A44C9139DB60B7A13D320350 /* OscPrintReceivedElements.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OscPrintReceivedElements.h; path = ../../../of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/osc/OscPrintReceivedElements.h; sourceTree = SOURCE_ROOT; };
+		A92B44728F329FA525FDE951 /* Statement.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Statement.h; path = ../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/include/SQLiteCpp/Statement.h; sourceTree = SOURCE_ROOT; };
+		AE2DABFAACC2D3FFD9E0D4FB /* NetworkingUtils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = NetworkingUtils.h; path = ../../../of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/ip/NetworkingUtils.h; sourceTree = SOURCE_ROOT; };
+		BD7BCA886CC334212467705D /* Statement.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Statement.cpp; path = ../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/src/Statement.cpp; sourceTree = SOURCE_ROOT; };
+		BFB6E4AE35EB831D18A92954 /* ofxOscParameterSync.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxOscParameterSync.cpp; path = ../../../of_v0.9.3_osx_release/addons/ofxOsc/src/ofxOscParameterSync.cpp; sourceTree = SOURCE_ROOT; };
+		C12330F3349081F7B99F9224 /* Backup.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Backup.cpp; path = ../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/src/Backup.cpp; sourceTree = SOURCE_ROOT; };
+		C1716A6F60BACDBB60647820 /* OscReceivedElements.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OscReceivedElements.h; path = ../../../of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/osc/OscReceivedElements.h; sourceTree = SOURCE_ROOT; };
+		C178DDA187597BF57388E71C /* ofxHistoryPlot.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxHistoryPlot.cpp; path = ../../../of_v0.9.3_osx_release/addons/ofxHistoryPlot/src/ofxHistoryPlot.cpp; sourceTree = SOURCE_ROOT; };
+		C4CC95BD138347EA8070ACB7 /* IpEndpointName.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = IpEndpointName.h; path = ../../../of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/ip/IpEndpointName.h; sourceTree = SOURCE_ROOT; };
+		CA380992D4D7874318681394 /* Backup.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Backup.h; path = ../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/include/SQLiteCpp/Backup.h; sourceTree = SOURCE_ROOT; };
+		CA44954E57174F85763C5E81 /* ofxOscMessage.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxOscMessage.h; path = ../../../of_v0.9.3_osx_release/addons/ofxOsc/src/ofxOscMessage.h; sourceTree = SOURCE_ROOT; };
+		CBC4900F3C911F3F8E955D13 /* UdpSocket.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = UdpSocket.cpp; path = ../../../of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/ip/posix/UdpSocket.cpp; sourceTree = SOURCE_ROOT; };
+		D25C811DB2E35E08F138B5E7 /* sqlite3.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 30; name = sqlite3.c; path = ../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/sqlite3/sqlite3.c; sourceTree = SOURCE_ROOT; };
+		D29D3F8CEC18B7623F330DDF /* OscException.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OscException.h; path = ../../../of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/osc/OscException.h; sourceTree = SOURCE_ROOT; };
+		D4EAD4E29EC998762805BE33 /* Exception.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Exception.h; path = ../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/include/SQLiteCpp/Exception.h; sourceTree = SOURCE_ROOT; };
+		D54A9022699A0CFA3035AE1B /* ofxHistoryPlot.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxHistoryPlot.h; path = ../../../of_v0.9.3_osx_release/addons/ofxHistoryPlot/src/ofxHistoryPlot.h; sourceTree = SOURCE_ROOT; };
+		D815EF4613B7BABDE5319445 /* ofxOscSender.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxOscSender.cpp; path = ../../../of_v0.9.3_osx_release/addons/ofxOsc/src/ofxOscSender.cpp; sourceTree = SOURCE_ROOT; };
+		DCEAC6DC2BBE82B407F6200D /* OscHostEndianness.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OscHostEndianness.h; path = ../../../of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/osc/OscHostEndianness.h; sourceTree = SOURCE_ROOT; };
+		DCF815FE83CDF6F8ABE6945D /* SQLiteCppUtils.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = SQLiteCppUtils.cpp; path = ../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/src/SQLiteCppUtils.cpp; sourceTree = SOURCE_ROOT; };
+		DDE865F7FB179B80C2DBD13A /* ofxOscReceiver.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxOscReceiver.cpp; path = ../../../of_v0.9.3_osx_release/addons/ofxOsc/src/ofxOscReceiver.cpp; sourceTree = SOURCE_ROOT; };
+		E0FE7F1EE9361E8855E8FE6F /* Column.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Column.cpp; path = ../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/src/Column.cpp; sourceTree = SOURCE_ROOT; };
+		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../of_v0.9.3_osx_release/libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E4B69B5B0A3A1756003C02F2 /* mySketchDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mySketchDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4B69E1D0A3A1BDC003C02F2 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
 		E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofApp.cpp; path = src/ofApp.cpp; sourceTree = SOURCE_ROOT; };
 		E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ofApp.h; path = src/ofApp.h; sourceTree = SOURCE_ROOT; };
 		E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; path = "openFrameworks-Info.plist"; sourceTree = "<group>"; };
-		E4EB691F138AFCF100A09F29 /* CoreOF.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = CoreOF.xcconfig; path = ../../../Code/of_v0.9.3_osx_release/libs/openFrameworksCompiled/project/osx/CoreOF.xcconfig; sourceTree = SOURCE_ROOT; };
+		E4EB691F138AFCF100A09F29 /* CoreOF.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = CoreOF.xcconfig; path = ../../../of_v0.9.3_osx_release/libs/openFrameworksCompiled/project/osx/CoreOF.xcconfig; sourceTree = SOURCE_ROOT; };
 		E4EB6923138AFD0F00A09F29 /* Project.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
-		E4FFD63CAADA05752F672D8A /* Column.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Column.h; path = ../../../Code/of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/include/SQLiteCpp/Column.h; sourceTree = SOURCE_ROOT; };
-		E80D751C92357E4AE9306521 /* PacketListener.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = PacketListener.h; path = ../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/ip/PacketListener.h; sourceTree = SOURCE_ROOT; };
-		E8D5512CE3455F0207DCF8B1 /* SQLiteCpp.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SQLiteCpp.h; path = ../../../Code/of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/include/SQLiteCpp/SQLiteCpp.h; sourceTree = SOURCE_ROOT; };
-		EA3411E109477DB967F56224 /* ofxOsc.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxOsc.h; path = ../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/src/ofxOsc.h; sourceTree = SOURCE_ROOT; };
+		E51D0019531F5069E57F681E /* OscPrintReceivedElements.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = OscPrintReceivedElements.cpp; path = ../../../of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/osc/OscPrintReceivedElements.cpp; sourceTree = SOURCE_ROOT; };
+		E8F42577660C466DF5F4B5AB /* NetworkingUtils.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = NetworkingUtils.cpp; path = ../../../of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/ip/posix/NetworkingUtils.cpp; sourceTree = SOURCE_ROOT; };
+		EBC120FBAC2DC1FF84845A5F /* OscOutboundPacketStream.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = OscOutboundPacketStream.cpp; path = ../../../of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/osc/OscOutboundPacketStream.cpp; sourceTree = SOURCE_ROOT; };
 		F011FE57193B1ADB67493171 /* EEGPlot.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = EEGPlot.h; path = src/EEGPlot.h; sourceTree = SOURCE_ROOT; };
-		F13767DBB0C16065B3F734E4 /* ofxOscMessage.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxOscMessage.cpp; path = ../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/src/ofxOscMessage.cpp; sourceTree = SOURCE_ROOT; };
-		F6B6D7A00773BC81F48FD93C /* UdpSocket.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = UdpSocket.h; path = ../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/ip/UdpSocket.h; sourceTree = SOURCE_ROOT; };
-		F9BAD60032CF8F52CCA1A464 /* ofxOscSender.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxOscSender.h; path = ../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/src/ofxOscSender.h; sourceTree = SOURCE_ROOT; };
-		FEF994D9489010D1243F0A52 /* ofxOscSender.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxOscSender.cpp; path = ../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/src/ofxOscSender.cpp; sourceTree = SOURCE_ROOT; };
+		F0C70EE02EA66236896610BC /* ofxVideoRecorder.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxVideoRecorder.h; path = ../../../of_v0.9.3_osx_release/addons/ofxVideoRecorder/src/ofxVideoRecorder.h; sourceTree = SOURCE_ROOT; };
+		F212A39F21CEE29EB9AB1BA5 /* Transaction.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Transaction.h; path = ../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/include/SQLiteCpp/Transaction.h; sourceTree = SOURCE_ROOT; };
+		F679A59F8E2B9BD56ADC3D4A /* OscPacketListener.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OscPacketListener.h; path = ../../../of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/osc/OscPacketListener.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,8 +163,8 @@
 		10B4B63F8F3405175B30A62B /* src */ = {
 			isa = PBXGroup;
 			children = (
-				D941938C18AB7CE1734C9491 /* SQLiteCppUtils.cpp */,
-				7F09F57F1AEEA20C78605FF0 /* SQLiteCppUtils.h */,
+				DCF815FE83CDF6F8ABE6945D /* SQLiteCppUtils.cpp */,
+				6FF038062FC6A94ECE88F4B1 /* SQLiteCppUtils.h */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -172,11 +172,11 @@
 		1E6801F702E7BA3AF5A0D208 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				7E0209FFAA7C504644FB2C02 /* Backup.cpp */,
-				C0578F106131841E43A178EA /* Column.cpp */,
-				9AB4BF7F9261EBBEE9536CFD /* Database.cpp */,
-				2EC15D41E47280A1DD29389C /* Statement.cpp */,
-				C84EFE91601DF0F045E4FCCF /* Transaction.cpp */,
+				C12330F3349081F7B99F9224 /* Backup.cpp */,
+				E0FE7F1EE9361E8855E8FE6F /* Column.cpp */,
+				4B057426B787220D6F9DCA84 /* Database.cpp */,
+				BD7BCA886CC334212467705D /* Statement.cpp */,
+				41EF3634A1442EB47E8502F8 /* Transaction.cpp */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -184,18 +184,18 @@
 		30CB364908817057B430D528 /* osc */ = {
 			isa = PBXGroup;
 			children = (
-				ABE7C1561CA8E9EF51D442CF /* MessageMappingOscPacketListener.h */,
-				6510E0E939990902E98267C3 /* OscException.h */,
-				0BD1F10221BEEA8C6D6355CC /* OscHostEndianness.h */,
-				244A884A93F941270488F82A /* OscOutboundPacketStream.cpp */,
-				3D5833FC112914682400E7D4 /* OscOutboundPacketStream.h */,
-				4FEF81DCA414362E16B00324 /* OscPacketListener.h */,
-				8604A2B347D6D94E9330A459 /* OscPrintReceivedElements.cpp */,
-				53A87660D6020CE8D6519D16 /* OscPrintReceivedElements.h */,
-				1474088FECD26A4FCFADA226 /* OscReceivedElements.cpp */,
-				07AB87917DBD3CFE20613619 /* OscReceivedElements.h */,
-				3C65B07902CC74C9909B5F47 /* OscTypes.cpp */,
-				51AA591C66CA87A37FECD36E /* OscTypes.h */,
+				234DC41C163CCA178550E701 /* MessageMappingOscPacketListener.h */,
+				D29D3F8CEC18B7623F330DDF /* OscException.h */,
+				DCEAC6DC2BBE82B407F6200D /* OscHostEndianness.h */,
+				EBC120FBAC2DC1FF84845A5F /* OscOutboundPacketStream.cpp */,
+				0F54EE25B9B27FFDBF94D20F /* OscOutboundPacketStream.h */,
+				F679A59F8E2B9BD56ADC3D4A /* OscPacketListener.h */,
+				E51D0019531F5069E57F681E /* OscPrintReceivedElements.cpp */,
+				A44C9139DB60B7A13D320350 /* OscPrintReceivedElements.h */,
+				4A9865B76993E58A7C5C1A19 /* OscReceivedElements.cpp */,
+				C1716A6F60BACDBB60647820 /* OscReceivedElements.h */,
+				6B2B8051D27FA0B0830B45D4 /* OscTypes.cpp */,
+				9BE47DBEA4A4A17064EE441E /* OscTypes.h */,
 			);
 			name = osc;
 			sourceTree = "<group>";
@@ -203,8 +203,8 @@
 		33DF582E00E0AC9B1FD972E5 /* sqlite3 */ = {
 			isa = PBXGroup;
 			children = (
-				9F858E64A4E56722AF3BA749 /* sqlite3.c */,
-				12A61862A4AB9AEA277FDF65 /* sqlite3.h */,
+				D25C811DB2E35E08F138B5E7 /* sqlite3.c */,
+				9666F457B9C6B332B911409C /* sqlite3.h */,
 			);
 			name = sqlite3;
 			sourceTree = "<group>";
@@ -220,8 +220,8 @@
 		3BE9C22C7EBA414788E4F83C /* src */ = {
 			isa = PBXGroup;
 			children = (
-				9420E516A7430AC135DEEE70 /* ofxHistoryPlot.cpp */,
-				86DF22187F4730A1F4A6703A /* ofxHistoryPlot.h */,
+				C178DDA187597BF57388E71C /* ofxHistoryPlot.cpp */,
+				D54A9022699A0CFA3035AE1B /* ofxHistoryPlot.h */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -239,8 +239,8 @@
 		641362CA659FAFEE4E81001B /* posix */ = {
 			isa = PBXGroup;
 			children = (
-				AA97DC23A572F47E4BC45BC8 /* NetworkingUtils.cpp */,
-				455E4754FFE2E31AE49AB3FE /* UdpSocket.cpp */,
+				E8F42577660C466DF5F4B5AB /* NetworkingUtils.cpp */,
+				CBC4900F3C911F3F8E955D13 /* UdpSocket.cpp */,
 			);
 			name = posix;
 			sourceTree = "<group>";
@@ -255,14 +255,14 @@
 		6E0EBD58A30A31DFC23B2F8A /* SQLiteCpp */ = {
 			isa = PBXGroup;
 			children = (
-				B305E62E93F11667BA6FCC27 /* Assertion.h */,
-				A4DAA7B6077EC05B82DE9D9E /* Backup.h */,
-				E4FFD63CAADA05752F672D8A /* Column.h */,
-				CDD05C855712E825239B3ED5 /* Database.h */,
-				8917B0482033B56AFBB1F983 /* Exception.h */,
-				E8D5512CE3455F0207DCF8B1 /* SQLiteCpp.h */,
-				B07342BEEAD9DA7DD0DB9015 /* Statement.h */,
-				95588FFFE05888407D91522C /* Transaction.h */,
+				993B7296159B52F82AA51462 /* Assertion.h */,
+				CA380992D4D7874318681394 /* Backup.h */,
+				5BF24BE7FCA72931A35F068B /* Column.h */,
+				2C02E386EBA89216B14FFB28 /* Database.h */,
+				D4EAD4E29EC998762805BE33 /* Exception.h */,
+				7CD5163A01AFC732A72A8FDA /* SQLiteCpp.h */,
+				A92B44728F329FA525FDE951 /* Statement.h */,
+				F212A39F21CEE29EB9AB1BA5 /* Transaction.h */,
 			);
 			name = SQLiteCpp;
 			sourceTree = "<group>";
@@ -286,8 +286,8 @@
 		89A809C09132402F1523C1C7 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				A00BCF5BCF3270FB9CAF883B /* ofxVideoRecorder.cpp */,
-				3C21F70B0914DFA1D265D296 /* ofxVideoRecorder.h */,
+				628FE1FC6833D249D5B83C79 /* ofxVideoRecorder.cpp */,
+				F0C70EE02EA66236896610BC /* ofxVideoRecorder.h */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -306,18 +306,18 @@
 		BD2F1A9F8D0C05EDB29122D0 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				EA3411E109477DB967F56224 /* ofxOsc.h */,
-				43B0BC27EF6F2752EE126E56 /* ofxOscArg.h */,
-				51259A128C2FABE7EFC7A5B9 /* ofxOscBundle.cpp */,
-				65E9926688639FF94B1AE810 /* ofxOscBundle.h */,
-				F13767DBB0C16065B3F734E4 /* ofxOscMessage.cpp */,
-				27BA92DD0033BD38FB3F5E6A /* ofxOscMessage.h */,
-				A7D17733FD1A930991E2CA29 /* ofxOscParameterSync.cpp */,
-				5399AC15F6145E71D6C1BC71 /* ofxOscParameterSync.h */,
-				4AD77DBDFA3C3F5F138BA583 /* ofxOscReceiver.cpp */,
-				DEBA4C7478D269D649879B42 /* ofxOscReceiver.h */,
-				FEF994D9489010D1243F0A52 /* ofxOscSender.cpp */,
-				F9BAD60032CF8F52CCA1A464 /* ofxOscSender.h */,
+				5CC5D3A1415AC2FE201A7927 /* ofxOsc.h */,
+				423A334A5667EAF4D770B7E0 /* ofxOscArg.h */,
+				4FFD0684361327A5088FFBAE /* ofxOscBundle.cpp */,
+				318AFDA072B1D03737F15A81 /* ofxOscBundle.h */,
+				98B7AB643059FA5A48C50132 /* ofxOscMessage.cpp */,
+				CA44954E57174F85763C5E81 /* ofxOscMessage.h */,
+				BFB6E4AE35EB831D18A92954 /* ofxOscParameterSync.cpp */,
+				6592BFCD3550F2954644FACB /* ofxOscParameterSync.h */,
+				DDE865F7FB179B80C2DBD13A /* ofxOscReceiver.cpp */,
+				09DF8072FD7355D171AA0F31 /* ofxOscReceiver.h */,
+				D815EF4613B7BABDE5319445 /* ofxOscSender.cpp */,
+				888FE7FAEF19D2ABC0315871 /* ofxOscSender.h */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -404,13 +404,13 @@
 		FF8CDF57858E9B94E3237115 /* ip */ = {
 			isa = PBXGroup;
 			children = (
-				DAF081F18EE72592C7C18162 /* IpEndpointName.cpp */,
-				9A02672C684981241E7B5CEB /* IpEndpointName.h */,
-				C705CDFC83F2E64665EB9F39 /* NetworkingUtils.h */,
-				E80D751C92357E4AE9306521 /* PacketListener.h */,
+				93FAADBF70E4B8CFF3FCCB17 /* IpEndpointName.cpp */,
+				C4CC95BD138347EA8070ACB7 /* IpEndpointName.h */,
+				AE2DABFAACC2D3FFD9E0D4FB /* NetworkingUtils.h */,
+				79FB12A8342F6309E6340E63 /* PacketListener.h */,
 				641362CA659FAFEE4E81001B /* posix */,
-				41CD0AC784261E5E78753142 /* TimerListener.h */,
-				F6B6D7A00773BC81F48FD93C /* UdpSocket.h */,
+				9BD27B173E0FFDA7A472225B /* TimerListener.h */,
+				90E0CC5DE6C30094C4657E45 /* UdpSocket.h */,
 			);
 			name = ip;
 			sourceTree = "<group>";
@@ -493,7 +493,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "mkdir -p \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Resources/\"\n# Copy default icon file into App/Resources\nrsync -aved \"$ICON_FILE\" \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Resources/\"\n# Copy libfmod and change install directory for fmod to run\nrsync -aved ../../../Code/of_v0.9.3_osx_release/libs/fmodex/lib/osx/libfmodex.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks/\";\ninstall_name_tool -change @executable_path/libfmodex.dylib @executable_path/../Frameworks/libfmodex.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/$PRODUCT_NAME\";\n# Copy GLUT framework (must remove for AppStore submissions)\nrsync -aved ../../../Code/of_v0.9.3_osx_release/libs/glut/lib/osx/GLUT.framework \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks/\"\n";
+			shellScript = "mkdir -p \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Resources/\"\n# Copy default icon file into App/Resources\nrsync -aved \"$ICON_FILE\" \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Resources/\"\n# Copy libfmod and change install directory for fmod to run\nrsync -aved ../../../of_v0.9.3_osx_release/libs/fmodex/lib/osx/libfmodex.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks/\";\ninstall_name_tool -change @executable_path/libfmodex.dylib @executable_path/../Frameworks/libfmodex.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/$PRODUCT_NAME\";\n# Copy GLUT framework (must remove for AppStore submissions)\nrsync -aved ../../../of_v0.9.3_osx_release/libs/glut/lib/osx/GLUT.framework \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks/\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -506,27 +506,27 @@
 				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
 				8338FC4DF2349D07EEECB164 /* EEGPlot.cpp in Sources */,
 				FAC0B5AAC067761BB1359EFC /* EEGSound.cpp in Sources */,
-				1FE5B9320F517F3021D6BEB7 /* ofxHistoryPlot.cpp in Sources */,
-				F497983C61C790425A390009 /* ofxOscBundle.cpp in Sources */,
-				0E5D2CDD73064BF4E200008E /* ofxOscMessage.cpp in Sources */,
-				07D98F6256F1822711870096 /* ofxOscParameterSync.cpp in Sources */,
-				BD8A8B5B2495DA10A1CA7602 /* ofxOscReceiver.cpp in Sources */,
-				F39645BDF0E336000C1F38E8 /* ofxOscSender.cpp in Sources */,
-				E91FD5EC72E49EBB96FA891D /* IpEndpointName.cpp in Sources */,
-				137FC51A79CF25B9F896B330 /* NetworkingUtils.cpp in Sources */,
-				6B562A440C5ADEC1E2294113 /* UdpSocket.cpp in Sources */,
-				B65E5F1352A100697D4709E5 /* OscOutboundPacketStream.cpp in Sources */,
-				48AFC243C96B9B69375AC5F9 /* OscPrintReceivedElements.cpp in Sources */,
-				DE1A5EAD16C1D41A79F84C62 /* OscReceivedElements.cpp in Sources */,
-				C4EACF53C3F193A3F5C9F9A1 /* OscTypes.cpp in Sources */,
-				DA6CDF7168E0F3D429D0E813 /* SQLiteCppUtils.cpp in Sources */,
-				FD060B4833602363D6731C68 /* sqlite3.c in Sources */,
-				2CEEF56663696A0AF582C3B8 /* Backup.cpp in Sources */,
-				45E72E7090A5E8E2EE4952E8 /* Column.cpp in Sources */,
-				AC481D349D653C8EAAD0CC50 /* Database.cpp in Sources */,
-				174F11FA534B347592169E06 /* Statement.cpp in Sources */,
-				7C8A7FBA253B65D181C3EC02 /* Transaction.cpp in Sources */,
-				3E653BDF7B7FFB22364AB797 /* ofxVideoRecorder.cpp in Sources */,
+				3382FE88732289E4000E36C2 /* ofxHistoryPlot.cpp in Sources */,
+				AAD5D0321E961E173C3CEED4 /* ofxOscBundle.cpp in Sources */,
+				19C8477B095795D2B05D465F /* ofxOscMessage.cpp in Sources */,
+				BF2FFC62B5DCECB22321D0BE /* ofxOscParameterSync.cpp in Sources */,
+				31AF6BBE339010D566F7AC37 /* ofxOscReceiver.cpp in Sources */,
+				0DFEDAB0756C10BD4E935C21 /* ofxOscSender.cpp in Sources */,
+				31835A90AD98F4E04BC6EED6 /* IpEndpointName.cpp in Sources */,
+				FCE10A04E1165CB8A6CDCBD0 /* NetworkingUtils.cpp in Sources */,
+				12AEB03D699C545BDB79C835 /* UdpSocket.cpp in Sources */,
+				AC8D7A7CFE55E69365E40505 /* OscOutboundPacketStream.cpp in Sources */,
+				5E892C2E3249A8312763D414 /* OscPrintReceivedElements.cpp in Sources */,
+				47E4D724FAE6450A382EFED0 /* OscReceivedElements.cpp in Sources */,
+				06CDDE1E90B32C44EBD60202 /* OscTypes.cpp in Sources */,
+				0CE92797F0951E511964B1FE /* SQLiteCppUtils.cpp in Sources */,
+				86B715626F5235FBD16BA3BC /* sqlite3.c in Sources */,
+				55171B0B1B75F82824E60EE7 /* Backup.cpp in Sources */,
+				D4005489016C2E2E19FAF4C2 /* Column.cpp in Sources */,
+				4F4285CE2433133BC6FD5DEC /* Database.cpp in Sources */,
+				325A4A38195F9C5852A4605F /* Statement.cpp in Sources */,
+				CA0199A9397CB983C7BE5179 /* Transaction.cpp in Sources */,
+				5D2C30CF96A15AE2D9793C63 /* ofxVideoRecorder.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,23 +563,23 @@
 				HEADER_SEARCH_PATHS = (
 					"$(OF_CORE_HEADERS)",
 					src,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxHistoryPlot/src,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/libs,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/ip,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/ip/posix,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/ip/win32,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/osc,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/src,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/include,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/include/SQLiteCpp,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/sqlite3,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/src,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxSQLiteCpp/src,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxVideoRecorder/src,
+					../../../of_v0.9.3_osx_release/addons/ofxHistoryPlot/src,
+					../../../of_v0.9.3_osx_release/addons/ofxOsc/libs,
+					../../../of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack,
+					../../../of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src,
+					../../../of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/ip,
+					../../../of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/ip/posix,
+					../../../of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/ip/win32,
+					../../../of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/osc,
+					../../../of_v0.9.3_osx_release/addons/ofxOsc/src,
+					../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs,
+					../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp,
+					../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/include,
+					../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/include/SQLiteCpp,
+					../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/sqlite3,
+					../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/src,
+					../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/src,
+					../../../of_v0.9.3_osx_release/addons/ofxVideoRecorder/src,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
@@ -614,23 +614,23 @@
 				HEADER_SEARCH_PATHS = (
 					"$(OF_CORE_HEADERS)",
 					src,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxHistoryPlot/src,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/libs,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/ip,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/ip/posix,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/ip/win32,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/osc,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/src,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/include,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/include/SQLiteCpp,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/sqlite3,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/src,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxSQLiteCpp/src,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxVideoRecorder/src,
+					../../../of_v0.9.3_osx_release/addons/ofxHistoryPlot/src,
+					../../../of_v0.9.3_osx_release/addons/ofxOsc/libs,
+					../../../of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack,
+					../../../of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src,
+					../../../of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/ip,
+					../../../of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/ip/posix,
+					../../../of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/ip/win32,
+					../../../of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/osc,
+					../../../of_v0.9.3_osx_release/addons/ofxOsc/src,
+					../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs,
+					../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp,
+					../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/include,
+					../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/include/SQLiteCpp,
+					../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/sqlite3,
+					../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/src,
+					../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/src,
+					../../../of_v0.9.3_osx_release/addons/ofxVideoRecorder/src,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				OTHER_CPLUSPLUSFLAGS = (
@@ -651,30 +651,30 @@
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
 				);
-				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../../Code/of_v0.9.3_osx_release/libs/glut/lib/osx\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../../of_v0.9.3_osx_release/libs/glut/lib/osx\"";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_MODEL_TUNING = NONE;
 				HEADER_SEARCH_PATHS = (
 					"$(OF_CORE_HEADERS)",
 					src,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxHistoryPlot/src,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/libs,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/ip,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/ip/posix,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/ip/win32,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/osc,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/src,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/include,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/include/SQLiteCpp,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/sqlite3,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/src,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxSQLiteCpp/src,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxVideoRecorder/src,
+					../../../of_v0.9.3_osx_release/addons/ofxHistoryPlot/src,
+					../../../of_v0.9.3_osx_release/addons/ofxOsc/libs,
+					../../../of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack,
+					../../../of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src,
+					../../../of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/ip,
+					../../../of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/ip/posix,
+					../../../of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/ip/win32,
+					../../../of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/osc,
+					../../../of_v0.9.3_osx_release/addons/ofxOsc/src,
+					../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs,
+					../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp,
+					../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/include,
+					../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/include/SQLiteCpp,
+					../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/sqlite3,
+					../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/src,
+					../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/src,
+					../../../of_v0.9.3_osx_release/addons/ofxVideoRecorder/src,
 					/usr/local/include,
 				);
 				ICON = "$(ICON_NAME_DEBUG)";
@@ -697,29 +697,29 @@
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
 				);
-				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../../Code/of_v0.9.3_osx_release/libs/glut/lib/osx\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../../of_v0.9.3_osx_release/libs/glut/lib/osx\"";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_MODEL_TUNING = NONE;
 				HEADER_SEARCH_PATHS = (
 					"$(OF_CORE_HEADERS)",
 					src,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxHistoryPlot/src,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/libs,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/ip,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/ip/posix,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/ip/win32,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/osc,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxOsc/src,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/include,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/include/SQLiteCpp,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/sqlite3,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/src,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxSQLiteCpp/src,
-					../../../Code/of_v0.9.3_osx_release/addons/ofxVideoRecorder/src,
+					../../../of_v0.9.3_osx_release/addons/ofxHistoryPlot/src,
+					../../../of_v0.9.3_osx_release/addons/ofxOsc/libs,
+					../../../of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack,
+					../../../of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src,
+					../../../of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/ip,
+					../../../of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/ip/posix,
+					../../../of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/ip/win32,
+					../../../of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/osc,
+					../../../of_v0.9.3_osx_release/addons/ofxOsc/src,
+					../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs,
+					../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp,
+					../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/include,
+					../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/include/SQLiteCpp,
+					../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/sqlite3,
+					../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/src,
+					../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/src,
+					../../../of_v0.9.3_osx_release/addons/ofxVideoRecorder/src,
 					/usr/local/include,
 				);
 				ICON = "$(ICON_NAME_RELEASE)";

@@ -9,11 +9,11 @@
     "A82C0ABFD7ACBB96A8DACF462A005A3A654155C7" : 0,
     "D7BD5E50F1992067E519EC37976C7921CC13709E" : 0
   },
-  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "B29BF4BA-BBDE-4E20-8168-DCF14B9A69A9",
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "DADB700F-4DF5-4586-84BA-1872DA15E62D",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "4131F34236DEB94090351DE98CD44A123F2873AB" : "..\/Code\/of_v0.9.3_osx_release\/addons\/ofxVideoRecorder",
-    "E81A77933AFC2C2569CCA3E5B22E9EEE7CC14B2F" : "..\/Code\/of_v0.9.3_osx_release\/addons\/ofxHistoryPlot",
-    "A82C0ABFD7ACBB96A8DACF462A005A3A654155C7" : "..\/Code\/of_v0.9.3_osx_release\/addons\/ofxSQLiteCpp",
+    "4131F34236DEB94090351DE98CD44A123F2873AB" : "..\/of_v0.9.3_osx_release\/addons\/ofxVideoRecorder",
+    "E81A77933AFC2C2569CCA3E5B22E9EEE7CC14B2F" : "..\/of_v0.9.3_osx_release\/addons\/ofxHistoryPlot",
+    "A82C0ABFD7ACBB96A8DACF462A005A3A654155C7" : "..\/of_v0.9.3_osx_release\/addons\/ofxSQLiteCpp",
     "D7BD5E50F1992067E519EC37976C7921CC13709E" : "socialbonds\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "mySketch",
@@ -31,7 +31,7 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A82C0ABFD7ACBB96A8DACF462A005A3A654155C7"
     },
     {
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Avnerus\/socialbonds",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/avnerus\/socialbonds",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D7BD5E50F1992067E519EC37976C7921CC13709E"
     },
