@@ -6,7 +6,7 @@ void EEGPlot::setup() {
 }
 
 void EEGPlot::appendChannel(int x, int y) {
-    int numSamples = 25000;
+    int numSamples = 5000;
     ofxHistoryPlot* plot = new ofxHistoryPlot( NULL, "", numSamples, false);	
     //plot->setLowerRange(0); //set only the lowest part of the range upper is adaptative to curve
     plot->setAutoRangeShrinksBack(true); //plot scale can shrink back after growing if plot curves requires it
@@ -34,6 +34,6 @@ void EEGPlot::update(int index, float value) {
 
 void EEGPlot::draw() {
     for (int i=0; i < channels.size(); i++) {
-        channels[i].plot->draw(channels[i].x, channels[i].y, 1920, 40);
+        channels[i].plot->draw(channels[i].x, channels[i].y, 1920, 100);
     }
 }

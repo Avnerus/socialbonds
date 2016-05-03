@@ -1,3 +1,4 @@
-ofxSQLiteCpp
 ofxHistoryPlot
+ofxOsc
+ofxSQLiteCpp
 ofxVideoRecorder

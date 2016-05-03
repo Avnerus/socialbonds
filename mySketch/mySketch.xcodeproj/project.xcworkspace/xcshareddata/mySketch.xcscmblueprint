@@ -1,0 +1,44 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "D7BD5E50F1992067E519EC37976C7921CC13709E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "4131F34236DEB94090351DE98CD44A123F2873AB" : 0,
+    "E81A77933AFC2C2569CCA3E5B22E9EEE7CC14B2F" : 0,
+    "A82C0ABFD7ACBB96A8DACF462A005A3A654155C7" : 0,
+    "D7BD5E50F1992067E519EC37976C7921CC13709E" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "B29BF4BA-BBDE-4E20-8168-DCF14B9A69A9",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "4131F34236DEB94090351DE98CD44A123F2873AB" : "..\/Code\/of_v0.9.3_osx_release\/addons\/ofxVideoRecorder",
+    "E81A77933AFC2C2569CCA3E5B22E9EEE7CC14B2F" : "..\/Code\/of_v0.9.3_osx_release\/addons\/ofxHistoryPlot",
+    "A82C0ABFD7ACBB96A8DACF462A005A3A654155C7" : "..\/Code\/of_v0.9.3_osx_release\/addons\/ofxSQLiteCpp",
+    "D7BD5E50F1992067E519EC37976C7921CC13709E" : "socialbonds\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "mySketch",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "mySketch\/mySketch.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/timscaffidi\/ofxVideoRecorder",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4131F34236DEB94090351DE98CD44A123F2873AB"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/bakercp\/ofxSQLiteCpp",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A82C0ABFD7ACBB96A8DACF462A005A3A654155C7"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Avnerus\/socialbonds",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D7BD5E50F1992067E519EC37976C7921CC13709E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/armadillu\/ofxHistoryPlot",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E81A77933AFC2C2569CCA3E5B22E9EEE7CC14B2F"
+    }
+  ]
+}

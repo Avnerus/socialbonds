@@ -21,11 +21,11 @@ void ofApp::setup(){
     try {
 
         // Open EEG Dataset
-        std::string eegDB = ofToDataPath("eegdata.db", true);
+        std::string eegDB = ofToDataPath("pouyan_eeg.db", true);
 
-        SQLite::Database db(eegDB);
+        _database = new SQLite::Database(eegDB);
 
-        _query = new SQLite::Statement(db, "SELECT * from data");
+        _query = new SQLite::Statement(*(_database), "SELECT * from data");
         _queryDone = false;
 
     }
@@ -36,11 +36,14 @@ void ofApp::setup(){
 
     _eegPlot = new EEGPlot();
     _eegPlot->setup();
+    
+    _eegSound = new EEGSound();
+    _eegSound->setup();
 
     int y = 10;
-    for (int i = 0; i < 26; i++) {
+    for (int i = 0; i < EEG_CHANNELS; i++) {
         _eegPlot->appendChannel(10, y);
-        y += 40;
+        y += 110;
     }
 
 
@@ -95,10 +98,11 @@ void ofApp::update(){
 
     for (int i = 0; i < numToRead && !_queryDone; i++) {
         if (_query->executeStep()) {
-            for (int channel = 0; channel < 26; channel++) {
+            for (int channel = 0; channel < EEG_CHANNELS; channel++) {
                 double value = _query->getColumn(channel);
                 value *= 5000.0;
                 _eegPlot->update(channel,value);
+                _eegSound->update(channel,value * 10000.0);
             }
         } else {
             _queryDone = true;
