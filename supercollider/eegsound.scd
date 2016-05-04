@@ -1,7 +1,7 @@
 // { SinOsc.ar(200, 0, 0.2) }.scope;
 (
 	SynthDef("eeg-synth", { arg freq = 440, out = 0;
-		Out.ar(out, SinOsc.ar(freq, 0, 0.2));
+		Out.ar(out, SinOsc.ar(freq, 0, 0.2)!2);
 	}).send(s);
 );
 
