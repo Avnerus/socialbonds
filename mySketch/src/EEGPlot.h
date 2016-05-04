@@ -13,7 +13,7 @@ class EEGPlot {
         void setup();
         void update(int index, float value);
         void draw(int x, int y, int width, int height);
-        void appendChannel();
+        void appendChannel(std::string name);
 
         vector<Channel> channels;
 

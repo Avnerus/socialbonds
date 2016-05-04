@@ -19,6 +19,7 @@
 		47E4D724FAE6450A382EFED0 /* OscReceivedElements.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A9865B76993E58A7C5C1A19 /* OscReceivedElements.cpp */; };
 		4F4285CE2433133BC6FD5DEC /* Database.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B057426B787220D6F9DCA84 /* Database.cpp */; };
 		55171B0B1B75F82824E60EE7 /* Backup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C12330F3349081F7B99F9224 /* Backup.cpp */; };
+		57D219FE1CDA40C6007758E8 /* EEGMarker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57D219FC1CDA40C6007758E8 /* EEGMarker.cpp */; };
 		5D2C30CF96A15AE2D9793C63 /* ofxVideoRecorder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 628FE1FC6833D249D5B83C79 /* ofxVideoRecorder.cpp */; };
 		5E892C2E3249A8312763D414 /* OscPrintReceivedElements.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E51D0019531F5069E57F681E /* OscPrintReceivedElements.cpp */; };
 		8338FC4DF2349D07EEECB164 /* EEGPlot.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 61A3667C0587E04DFCF991EF /* EEGPlot.cpp */; };
@@ -76,6 +77,8 @@
 		4A9865B76993E58A7C5C1A19 /* OscReceivedElements.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = OscReceivedElements.cpp; path = ../../../of_v0.9.3_osx_release/addons/ofxOsc/libs/oscpack/src/osc/OscReceivedElements.cpp; sourceTree = SOURCE_ROOT; };
 		4B057426B787220D6F9DCA84 /* Database.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Database.cpp; path = ../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/src/Database.cpp; sourceTree = SOURCE_ROOT; };
 		4FFD0684361327A5088FFBAE /* ofxOscBundle.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxOscBundle.cpp; path = ../../../of_v0.9.3_osx_release/addons/ofxOsc/src/ofxOscBundle.cpp; sourceTree = SOURCE_ROOT; };
+		57D219FC1CDA40C6007758E8 /* EEGMarker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EEGMarker.cpp; sourceTree = "<group>"; };
+		57D219FD1CDA40C6007758E8 /* EEGMarker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EEGMarker.h; sourceTree = "<group>"; };
 		5BF24BE7FCA72931A35F068B /* Column.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Column.h; path = ../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/include/SQLiteCpp/Column.h; sourceTree = SOURCE_ROOT; };
 		5CC5D3A1415AC2FE201A7927 /* ofxOsc.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxOsc.h; path = ../../../of_v0.9.3_osx_release/addons/ofxOsc/src/ofxOsc.h; sourceTree = SOURCE_ROOT; };
 		61A3667C0587E04DFCF991EF /* EEGPlot.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = EEGPlot.cpp; path = src/EEGPlot.cpp; sourceTree = SOURCE_ROOT; };
@@ -372,6 +375,8 @@
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				57D219FC1CDA40C6007758E8 /* EEGMarker.cpp */,
+				57D219FD1CDA40C6007758E8 /* EEGMarker.h */,
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */,
 				E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */,
@@ -519,6 +524,7 @@
 				5E892C2E3249A8312763D414 /* OscPrintReceivedElements.cpp in Sources */,
 				47E4D724FAE6450A382EFED0 /* OscReceivedElements.cpp in Sources */,
 				06CDDE1E90B32C44EBD60202 /* OscTypes.cpp in Sources */,
+				57D219FE1CDA40C6007758E8 /* EEGMarker.cpp in Sources */,
 				0CE92797F0951E511964B1FE /* SQLiteCppUtils.cpp in Sources */,
 				86B715626F5235FBD16BA3BC /* sqlite3.c in Sources */,
 				55171B0B1B75F82824E60EE7 /* Backup.cpp in Sources */,

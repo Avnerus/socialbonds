@@ -40,8 +40,11 @@ void ofApp::setup(){
     _eegSound = new EEGSound();
     _eegSound->setup();
 
+    _eegMarker = NULL;
+
+    std::vector<std::string> channelNames = {"C3","Cz","C4","CP1","CP2","CP5","CP6","P3","Pz"};
     for (int i = 0; i < EEG_CHANNELS; i++) {
-        _eegPlot->appendChannel();
+        _eegPlot->appendChannel(channelNames[i]);
     }
 
 
@@ -93,7 +96,6 @@ void ofApp::update(){
         numToRead = _eegPerLastFrame;
     }
 
-
     for (int i = 0; i < numToRead && !_queryDone; i++) {
         if (_query->executeStep()) {
             for (int channel = 0; channel < EEG_CHANNELS; channel++) {
@@ -106,6 +108,10 @@ void ofApp::update(){
         }
     }
 
+    if (_eegMarker) {
+        _eegMarker->update();
+    }
+
 }
 
 //--------------------------------------------------------------
@@ -113,6 +119,9 @@ void ofApp::draw(){
 
 
     _eegPlot->draw(20, 0, WIDTH, HEIGHT);
+    if (_eegMarker) {
+        _eegMarker->draw();
+    }
 
     if (_nowRecording) {
         _rgbFbo.end();
@@ -130,8 +139,14 @@ void ofApp::keyPressed(int key){
 
 //--------------------------------------------------------------
 void ofApp::keyReleased(int key){
-    vidRecorder.close();
-    _nowRecording = false;
+    if (key == 'v') {
+        vidRecorder.close();
+        _nowRecording = false;
+    } 
+    if (key == OF_KEY_RETURN) {
+        _eegMarker = new EEGMarker();
+        _eegMarker->setup(this);
+    }
 
 }
 

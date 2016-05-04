@@ -4,21 +4,27 @@
 #include "SQLiteCpp.h"
 #include "EEGPlot.h"
 #include "EEGSound.h"
-
+#include "EEGMarker.h"
 #include "ofxVideoRecorder.h"
 
-const int FRAME_RATE = 25;
-const int EEG_RATE = 500;
-const int EEG_CHANNELS = 9;
-const int WIDTH = 5120;
-const int HEIGHT = 2880;
-const int REC_SAMPLE_RATE  = 44100;
-const int REC_CHANNELS = 2;
+class EEGMarker;
 
 
 class ofApp : public ofBaseApp {
 
 	public:
+        const int FRAME_RATE = 25;
+        const int EEG_RATE = 500;
+        const int EEG_CHANNELS = 9;
+        const int WIDTH = 5120;
+        const int HEIGHT = 2880;
+        /*
+        const int WIDTH = 1920;
+        const int HEIGHT = 1080;
+        */
+        const int REC_SAMPLE_RATE  = 44100;
+        const int REC_CHANNELS = 2;
+
 		void setup();
 		void update();
 		void draw();
@@ -48,6 +54,7 @@ class ofApp : public ofBaseApp {
 
         EEGPlot* _eegPlot;
         EEGSound* _eegSound;
+        EEGMarker* _eegMarker;
 
         ofxVideoRecorder vidRecorder;
         ofFbo _rgbFbo;

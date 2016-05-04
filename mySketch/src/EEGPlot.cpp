@@ -4,13 +4,13 @@ void EEGPlot::setup() {
 	mouseIsPressed = false;
 }
 
-void EEGPlot::appendChannel() {
+void EEGPlot::appendChannel(std::string name) {
     int numSamples = 6000;
-    ofxHistoryPlot* plot = new ofxHistoryPlot( NULL, "", numSamples, false);	
+    ofxHistoryPlot* plot = new ofxHistoryPlot( NULL, name, numSamples, false);	
     //plot->setLowerRange(0); //set only the lowest part of the range upper is adaptative to curve
     plot->setAutoRangeShrinksBack(true); //plot scale can shrink back after growing if plot curves requires it
     plot->setColor( ofColor(255,255,255) );
-    plot->setShowNumericalInfo(true);
+    plot->setShowNumericalInfo(false);
     plot->setRespectBorders(true);
     plot->setLineWidth(1);
     plot->setRange(-1.0, 1.0);

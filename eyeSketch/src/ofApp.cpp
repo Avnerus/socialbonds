@@ -8,7 +8,6 @@ void ofApp::setup(){
     ofSetBackgroundColor(0,0,0);
     //ofSetBackgroundAuto(false);
     ofSetVerticalSync(true);
-    ofSetFullscreen(true);
 
     ofSetFrameRate(FRAME_RATE);
     
