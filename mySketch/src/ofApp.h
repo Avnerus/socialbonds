@@ -7,11 +7,11 @@
 
 #include "ofxVideoRecorder.h"
 
-const int FRAME_RATE = 60;
+const int FRAME_RATE = 25;
 const int EEG_RATE = 500;
-const int EEG_CHANNELS = 10;
-const int WIDTH = 1920;
-const int HEIGHT = 1080;
+const int EEG_CHANNELS = 9;
+const int WIDTH = 5120;
+const int HEIGHT = 2880;
 const int REC_SAMPLE_RATE  = 44100;
 const int REC_CHANNELS = 2;
 

@@ -40,10 +40,8 @@ void ofApp::setup(){
     _eegSound = new EEGSound();
     _eegSound->setup();
 
-    int y = 10;
     for (int i = 0; i < EEG_CHANNELS; i++) {
-        _eegPlot->appendChannel(10, y);
-        y += 110;
+        _eegPlot->appendChannel();
     }
 
 
@@ -100,9 +98,8 @@ void ofApp::update(){
         if (_query->executeStep()) {
             for (int channel = 0; channel < EEG_CHANNELS; channel++) {
                 double value = _query->getColumn(channel);
-                value *= 5000.0;
-                _eegPlot->update(channel,value);
-                _eegSound->update(channel,value * 10000.0);
+                _eegPlot->update(channel,value * 5000.0);
+                _eegSound->update(channel,value * 5000.0);
             }
         } else {
             _queryDone = true;
@@ -115,7 +112,7 @@ void ofApp::update(){
 void ofApp::draw(){
 
 
-    _eegPlot->draw();
+    _eegPlot->draw(20, 0, WIDTH, HEIGHT);
 
     if (_nowRecording) {
         _rgbFbo.end();

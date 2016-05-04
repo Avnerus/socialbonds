@@ -12,8 +12,8 @@ class EEGPlot {
     public:
         void setup();
         void update(int index, float value);
-        void draw();
-        void appendChannel(int x, int y);
+        void draw(int x, int y, int width, int height);
+        void appendChannel();
 
         vector<Channel> channels;
 

@@ -2,11 +2,10 @@
 
 void EEGPlot::setup() {
 	mouseIsPressed = false;
-
 }
 
-void EEGPlot::appendChannel(int x, int y) {
-    int numSamples = 5000;
+void EEGPlot::appendChannel() {
+    int numSamples = 6000;
     ofxHistoryPlot* plot = new ofxHistoryPlot( NULL, "", numSamples, false);	
     //plot->setLowerRange(0); //set only the lowest part of the range upper is adaptative to curve
     plot->setAutoRangeShrinksBack(true); //plot scale can shrink back after growing if plot curves requires it
@@ -14,6 +13,7 @@ void EEGPlot::appendChannel(int x, int y) {
     plot->setShowNumericalInfo(true);
     plot->setRespectBorders(true);
     plot->setLineWidth(1);
+    plot->setRange(-1.0, 1.0);
 
     plot->setShowSmoothedCurve(true); //plot a smoothed version of the values, but alos the original in lesser alpha
     plot->setSmoothFilter(0.1); //smooth filter strength
@@ -22,8 +22,6 @@ void EEGPlot::appendChannel(int x, int y) {
 
     Channel newChannel;
     newChannel.plot = plot;
-    newChannel.x = x;
-    newChannel.y = y;
 
     channels.push_back(newChannel);
 }
@@ -32,8 +30,12 @@ void EEGPlot::update(int index, float value) {
     channels[index].plot->update(value);	//manually add values to the plot
 }
 
-void EEGPlot::draw() {
+void EEGPlot::draw(int x, int y, int width, int height) {
+    int yOffset = y + 20;
+    int heightPerChannel = (height - 20 * channels.size()) / (channels.size()) ;
     for (int i=0; i < channels.size(); i++) {
-        channels[i].plot->draw(channels[i].x, channels[i].y, 1900, 100);
+        channels[i].plot->draw(x, yOffset, width - 60, heightPerChannel);
+        yOffset += heightPerChannel + 20;
     }
 }
+
