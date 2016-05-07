@@ -15,15 +15,18 @@ class ofApp : public ofBaseApp {
 	public:
         const int FRAME_RATE = 25;
         const int EEG_RATE = 500;
-        const int EEG_CHANNELS = 1;
-        /*const int WIDTH = 5120;
-        const int HEIGHT = 2880;*/
+        const int EEG_CHANNELS = 9;
+        const int WIDTH = 5120;
+        const int HEIGHT = 2880;
         
-        const int WIDTH = 1920;
-        const int HEIGHT = 1080;
+        //const int WIDTH = 1920;
+        //const int HEIGHT = 1080;
         
         const int REC_SAMPLE_RATE  = 44100;
         const int REC_CHANNELS = 2;
+
+        const float LPP_THRESHOLD = 0.000710264;
+        //const float LPP_THRESHOLD = 0.000564972;
 
 		void setup();
 		void update();
@@ -58,7 +61,9 @@ class ofApp : public ofBaseApp {
 
         EEGPlot* _eegPlot;
         EEGSound* _eegSound;
-        EEGMarker* _eegMarker;
+
+        std::vector< std::shared_ptr<EEGMarker> > _markers;
+        std::shared_ptr<EEGMarker> _liveMarker;
 
         ofxVideoRecorder vidRecorder;
         ofFbo _rgbFbo;

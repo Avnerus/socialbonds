@@ -1,5 +1,9 @@
 #include "ofApp.h"
 
+bool markerFinished(std::shared_ptr<EEGMarker>& marker) {
+    return marker->finished;
+}
+
 //--------------------------------------------------------------
 void ofApp::setup(){
 
@@ -42,7 +46,8 @@ void ofApp::setup(){
     _eegSound = new EEGSound();
     _eegSound->setup();
 
-    _eegMarker = NULL;
+    _liveMarker = nullptr;
+
 
     std::vector<std::string> channelNames = {"C3","Cz","C4","CP1","CP2","CP5","CP6","P3","Pz"};
     for (int i = 0; i < EEG_CHANNELS; i++) {
@@ -104,14 +109,36 @@ void ofApp::update(){
                 _eegPlot->update(channel,value * 5000.0);
                 _eegSound->update(channel,value * 5000.0);
             }
+            double lpp = _query->getColumn(10); // Last column is LPP
+            std::cout << lpp << std::endl;
+            if (lpp > LPP_THRESHOLD) {
+                // Passed the threshold
+                _eegSound->updateLPP(1.0);
+                if (_liveMarker) {
+                    _liveMarker->update(lpp);
+                } else {
+                    // Create a new marker
+                    std::shared_ptr<EEGMarker> marker(new EEGMarker());
+                    marker->setup(this);
+                    marker->update(lpp);
+                    _markers.push_back(marker);
+                    _liveMarker = marker;
+                }
+            } else {
+                _eegSound->updateLPP(0.0);
+                if (_liveMarker) {
+                    std::cout << "No more live marker" << std::endl;
+                    _liveMarker = nullptr;
+                }
+            }
         } else {
             _queryDone = true;
         }
     }
 
-    if (_eegMarker) {
-        _eegMarker->update();
-    }
+
+    _markers.erase( std::remove_if(_markers.begin(), _markers.end(), markerFinished), _markers.end() );
+
     _cam.setPosition(WIDTH / 2, HEIGHT / 2, _cam.getPosition().z);
 }
 
@@ -123,8 +150,12 @@ void ofApp::draw(){
     _eegPlot->draw(20, 0, WIDTH, HEIGHT);
     _cam.end();
 
-    if (_eegMarker) {
-        _eegMarker->draw();
+    for (auto & marker : _markers) {
+        if (!marker->finished) {
+            marker->draw();
+        } else {
+
+        }
     }
 
     if (_nowRecording) {
@@ -147,11 +178,6 @@ void ofApp::keyReleased(int key){
         vidRecorder.close();
         _nowRecording = false;
     } 
-    if (key == OF_KEY_RETURN) {
-        _eegMarker = new EEGMarker();
-        _eegMarker->setup(this);
-    }
-
 }
 
 //--------------------------------------------------------------

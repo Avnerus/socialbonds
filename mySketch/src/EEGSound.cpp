@@ -20,3 +20,10 @@ void EEGSound::update(int channel, float value) {
     _sender.sendMessage(_message);
 }
 
+void EEGSound::updateLPP(float value) {
+    _message.clear();
+    _message.setAddress("/lpp");
+    _message.addFloatArg(value);
+    _sender.sendMessage(_message);
+}
+

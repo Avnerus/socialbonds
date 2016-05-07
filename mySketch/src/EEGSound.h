@@ -17,6 +17,7 @@ class EEGSound {
 public:
     void setup();
     void update(int channel, float value);
+    void updateLPP(float value);
     
 private:
     ofxOscSender _sender;

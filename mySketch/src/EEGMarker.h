@@ -14,15 +14,20 @@ class ofApp;
 class EEGMarker {
     
 public:
+    ~EEGMarker();
+
     void setup(ofApp* app);
     void draw();
-    void update();
+    void update(double lpp);
+
+    bool finished;
     
 private:
     ofApp* _app;
-    int _x;
-    int _width;
+    float _x;
+    float _width;
     int _vertexIndex;
+    float _lastX;
     ofMatrix4x4 _meshMatrix;
 };
 
