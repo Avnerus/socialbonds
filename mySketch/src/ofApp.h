@@ -15,13 +15,13 @@ class ofApp : public ofBaseApp {
 	public:
         const int FRAME_RATE = 25;
         const int EEG_RATE = 500;
-        const int EEG_CHANNELS = 9;
-        const int WIDTH = 5120;
-        const int HEIGHT = 2880;
-        /*
+        const int EEG_CHANNELS = 1;
+        /*const int WIDTH = 5120;
+        const int HEIGHT = 2880;*/
+        
         const int WIDTH = 1920;
         const int HEIGHT = 1080;
-        */
+        
         const int REC_SAMPLE_RATE  = 44100;
         const int REC_CHANNELS = 2;
 
@@ -44,6 +44,10 @@ class ofApp : public ofBaseApp {
 
         void recordingComplete(ofxVideoRecorderOutputFileCompleteEventArgs& args);
 
+        EEGPlot* getEEGPlot();
+
+        ofCamera* getCamera();
+
     private:
         SQLite::Statement* _query;
         SQLite::Database* _database;
@@ -59,6 +63,8 @@ class ofApp : public ofBaseApp {
         ofxVideoRecorder vidRecorder;
         ofFbo _rgbFbo;
         ofPixels _pix;
+
+        ofEasyCam _cam;
 
         float _eyeX;
         float _eyeY;

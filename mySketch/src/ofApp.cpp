@@ -11,6 +11,8 @@ void ofApp::setup(){
 
     ofSetFrameRate(FRAME_RATE);
 
+    _cam.setupPerspective();
+
     //ofSetLogLevel(OF_LOG_VERBOSE);
 
     _eegPerFrame = EEG_RATE / FRAME_RATE;
@@ -46,7 +48,6 @@ void ofApp::setup(){
     for (int i = 0; i < EEG_CHANNELS; i++) {
         _eegPlot->appendChannel(channelNames[i]);
     }
-
 
     _nowRecording = false;
 
@@ -111,14 +112,17 @@ void ofApp::update(){
     if (_eegMarker) {
         _eegMarker->update();
     }
-
+    _cam.setPosition(WIDTH / 2, HEIGHT / 2, _cam.getPosition().z);
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
 
 
+    _cam.begin();
     _eegPlot->draw(20, 0, WIDTH, HEIGHT);
+    _cam.end();
+
     if (_eegMarker) {
         _eegMarker->draw();
     }
@@ -203,4 +207,12 @@ void ofApp::exit(){
 
 void ofApp::recordingComplete(ofxVideoRecorderOutputFileCompleteEventArgs& args){
     std::cout << "The recoded video file is now complete." << std::endl;
+}
+
+EEGPlot* ofApp::getEEGPlot() {
+    return _eegPlot;
+}
+
+ofCamera* ofApp::getCamera() {
+    return &_cam;
 }

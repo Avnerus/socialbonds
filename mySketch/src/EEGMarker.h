@@ -22,6 +22,8 @@ private:
     ofApp* _app;
     int _x;
     int _width;
+    int _vertexIndex;
+    ofMatrix4x4 _meshMatrix;
 };
 
     

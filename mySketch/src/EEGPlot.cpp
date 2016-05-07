@@ -39,3 +39,14 @@ void EEGPlot::draw(int x, int y, int width, int height) {
     }
 }
 
+ofMatrix4x4 EEGPlot::getChannelMeshMatrix(int index, int x, int y, int width, int height) {
+    int yOffset = y + 20 * (index + 1);
+    int heightPerChannel = (height - 20 * channels.size()) / (channels.size()) ;
+
+    return channels[index].plot->getMeshMatrix(x,yOffset,width,heightPerChannel);
+}
+
+ofVboMesh* EEGPlot::getChannelPlotMesh(int index) {
+    return channels[index].plot->getPlotMesh();
+}
+

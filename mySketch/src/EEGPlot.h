@@ -15,6 +15,10 @@ class EEGPlot {
         void draw(int x, int y, int width, int height);
         void appendChannel(std::string name);
 
+        ofMatrix4x4 getChannelMeshMatrix(int index, int x, int y, int width, int height);
+
+        ofVboMesh* getChannelPlotMesh(int index);
+
         vector<Channel> channels;
 
         bool mouseIsPressed;
