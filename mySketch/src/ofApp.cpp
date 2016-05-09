@@ -69,7 +69,7 @@ void ofApp::setup(){
 
         vidRecorder.setVideoCodec("h264"); 
         vidRecorder.setVideoBitrate("4000k");
-        vidRecorder.setup("testeeg.mov", WIDTH, HEIGHT, 30);
+        vidRecorder.setup("testeeg.mov", WIDTH, HEIGHT, 25);
             
         // Start recording
         vidRecorder.start();
@@ -110,9 +110,10 @@ void ofApp::update(){
                 _eegSound->update(channel,value * 5000.0);
             }
             double lpp = _query->getColumn(10); // Last column is LPP
-            std::cout << lpp << std::endl;
+            //std::cout << lpp << std::endl;
             if (lpp > LPP_THRESHOLD) {
                 // Passed the threshold
+                ofSetBackgroundColor(255,255,255,255);
                 _eegSound->updateLPP(1.0);
                 if (_liveMarker) {
                     _liveMarker->update(lpp);
@@ -125,9 +126,9 @@ void ofApp::update(){
                     _liveMarker = marker;
                 }
             } else {
-                _eegSound->updateLPP(0.0);
+                ofSetBackgroundColor(0,0,0);
                 if (_liveMarker) {
-                    std::cout << "No more live marker" << std::endl;
+                    //std::cout << "No more live marker" << std::endl;
                     _liveMarker = nullptr;
                 }
             }
