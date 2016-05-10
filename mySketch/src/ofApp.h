@@ -75,4 +75,6 @@ class ofApp : public ofBaseApp {
         float _eyeY;
 
         bool _nowRecording;
+
+        bool _blink;
 };

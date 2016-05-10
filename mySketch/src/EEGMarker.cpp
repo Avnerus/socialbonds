@@ -9,6 +9,10 @@
 #include <EEGMarker.h>
 
 
+EEGMarker::EEGMarker():_markerColor(0, 0, 255),_markerFilling(0, 0, 255, 50) {
+
+}
+
 void EEGMarker::setup(ofApp* app) {
     _app = app;
     _vertexIndex = _app->getEEGPlot()->getChannelPlotMesh(0)->getNumVertices() - 1;
@@ -25,9 +29,9 @@ void EEGMarker::setup(ofApp* app) {
 }
 
 void EEGMarker::draw() {
-    ofSetColor(0,255,0);
+    ofSetColor(_markerColor);
     ofDrawRectangle(_x,0, 2, _app->HEIGHT);
-    ofSetColor(0,255,0,50);
+    ofSetColor(_markerFilling);
     ofDrawRectangle(_x + 2,0, _width, _app->HEIGHT);
 
     ofVec3f worldVertex   = _app->getEEGPlot()->getChannelPlotMesh(0)->getVertex(_vertexIndex);

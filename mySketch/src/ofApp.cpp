@@ -16,6 +16,7 @@ void ofApp::setup(){
     ofSetFrameRate(FRAME_RATE);
 
     _cam.setupPerspective();
+    _blink = false;
 
     //ofSetLogLevel(OF_LOG_VERBOSE);
 
@@ -102,6 +103,9 @@ void ofApp::update(){
         numToRead = _eegPerLastFrame;
     }
 
+    bool thresholdPassed = false;   
+    double biggestValue = 0;
+
     for (int i = 0; i < numToRead && !_queryDone; i++) {
         if (_query->executeStep()) {
             for (int channel = 0; channel < EEG_CHANNELS; channel++) {
@@ -112,28 +116,42 @@ void ofApp::update(){
             double lpp = _query->getColumn(10); // Last column is LPP
             //std::cout << lpp << std::endl;
             if (lpp > LPP_THRESHOLD) {
-                // Passed the threshold
-                ofSetBackgroundColor(255,255,255,255);
-                _eegSound->updateLPP(1.0);
-                if (_liveMarker) {
-                    _liveMarker->update(lpp);
-                } else {
-                    // Create a new marker
-                    std::shared_ptr<EEGMarker> marker(new EEGMarker());
-                    marker->setup(this);
-                    marker->update(lpp);
-                    _markers.push_back(marker);
-                    _liveMarker = marker;
-                }
-            } else {
-                ofSetBackgroundColor(0,0,0);
-                if (_liveMarker) {
-                    //std::cout << "No more live marker" << std::endl;
-                    _liveMarker = nullptr;
+                thresholdPassed = true;
+                if (lpp > biggestValue) {
+                    biggestValue = lpp;
                 }
             }
         } else {
             _queryDone = true;
+        }
+    }
+
+    if (thresholdPassed) {
+        // Passed the threshold
+        if (_liveMarker) {
+            _liveMarker->update(biggestValue);
+        } else {
+            // Create a new marker
+            std::shared_ptr<EEGMarker> marker(new EEGMarker());
+            marker->setup(this);
+            marker->update(biggestValue);
+            _markers.push_back(marker);
+            _liveMarker = marker;
+        }
+        if (!_blink) {
+            _blink = true;
+            ofSetBackgroundColor(255,255,255);
+            _eegSound->updateLPP(1.0);
+        } else {
+            ofSetBackgroundColor(0,0,0);
+            _blink = false;
+        }
+    } else {
+        ofSetBackgroundColor(0,0,0);
+        _blink = false;
+        if (_liveMarker) {
+            //std::cout << "No more live marker" << std::endl;
+            _liveMarker = nullptr;
         }
     }
 

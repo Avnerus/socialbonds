@@ -14,6 +14,7 @@ class ofApp;
 class EEGMarker {
     
 public:
+    EEGMarker();
     ~EEGMarker();
 
     void setup(ofApp* app);
@@ -29,6 +30,9 @@ private:
     int _vertexIndex;
     float _lastX;
     ofMatrix4x4 _meshMatrix;
+
+    ofColor _markerColor;
+    ofColor _markerFilling;
 };
 
     
