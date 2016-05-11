@@ -47,6 +47,9 @@ class ofApp : public ofBaseApp {
 
         void recordingComplete(ofxVideoRecorderOutputFileCompleteEventArgs& args);
 
+        int getNumberOfSamplesPerFrame();
+        ofTrueTypeFont* getFont();
+
         EEGPlot* getEEGPlot();
 
         ofCamera* getCamera();
@@ -70,6 +73,7 @@ class ofApp : public ofBaseApp {
         ofPixels _pix;
 
         ofEasyCam _cam;
+        ofTrueTypeFont _font;
 
         float _eyeX;
         float _eyeY;

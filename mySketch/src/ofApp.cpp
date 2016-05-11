@@ -70,7 +70,8 @@ void ofApp::setup(){
 
         vidRecorder.setVideoCodec("h264"); 
         vidRecorder.setVideoBitrate("4000k");
-        vidRecorder.setup("testeeg.mov", WIDTH, HEIGHT, 25);
+        //vidRecorder.setPixelFormat("yuv420p");
+        vidRecorder.setup("testeeg.mp4", WIDTH, HEIGHT, 25);
             
         // Start recording
         vidRecorder.start();
@@ -123,6 +124,8 @@ void ofApp::update(){
             }
         } else {
             _queryDone = true;
+            vidRecorder.close();
+            _nowRecording = false;
         }
     }
 
@@ -133,8 +136,7 @@ void ofApp::update(){
         } else {
             // Create a new marker
             std::shared_ptr<EEGMarker> marker(new EEGMarker());
-            marker->setup(this);
-            marker->update(biggestValue);
+            marker->setup(this, biggestValue);
             _markers.push_back(marker);
             _liveMarker = marker;
         }
@@ -155,26 +157,42 @@ void ofApp::update(){
         }
     }
 
+    for (auto & marker : _markers) {
+        if (marker != _liveMarker) {
+            marker->update(0);
+        } 
+    }
 
     _markers.erase( std::remove_if(_markers.begin(), _markers.end(), markerFinished), _markers.end() );
 
     _cam.setPosition(WIDTH / 2, HEIGHT / 2, _cam.getPosition().z);
+    
+    _font.load("Verdana.ttf", 36);
+}
+
+int ofApp::getNumberOfSamplesPerFrame() {
+    return _eegPerFrame;
+}
+
+ofTrueTypeFont* ofApp::getFont() {
+    return &_font;
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
 
 
+    ofSetColor(0,0,0);
+    ofDrawRectangle(WIDTH - 60, 0, 60, HEIGHT);
+
     _cam.begin();
-    _eegPlot->draw(20, 0, WIDTH, HEIGHT);
+    _eegPlot->draw(0, 0, WIDTH, HEIGHT);
     _cam.end();
 
     for (auto & marker : _markers) {
         if (!marker->finished) {
             marker->draw();
-        } else {
-
-        }
+        } 
     }
 
     if (_nowRecording) {

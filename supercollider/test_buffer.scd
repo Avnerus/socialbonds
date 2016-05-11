@@ -13,10 +13,31 @@ o = OSCFunc({ arg msg;
 (
 SynthDef(\oscplayer,{ arg out = 0, bufnum;
 	var signal, subosc;
-	signal = Osc.ar(bufnum, MouseX.kr(60,300)); // mouse x to control pitch
+//    signal = Osc.ar(bufnum, MouseX.kr(60,300)); // mouse x to control pitch
+//	signal = Osc.ar(bufnum, 125.32056); // mouse x to control pitch
+	signal = Osc.ar(bufnum, 72.653688); // mouse x to control pitch
 	subosc = {SinOsc.ar(80,1,0.5)};
     Out.ar(0,
-        Pan2.ar(subosc + signal)
+		LPF.ar(
+			Pan2.ar(subosc + signal),	// the source to be filtered
+			2000		// control the filter frequency with a line
+		,1,0.6)
+    )
+}).add
+)
+
+{MouseX.kr.poll}.play
+
+var h;
+h = Signal.hanningWindow(2048).asWavetable;
+
+(
+SynthDef(\oscplayer2,{ arg out = 0, bufnum;
+	var input, output;
+	input = LFOOsc.ar(MouseX.kr(80, 800, \exponential), 0, 1,0);
+	output = Shaper.ar(bufnum, input);
+    Out.ar(0,
+        Pan2.ar(output)
     )
 }).add
 )

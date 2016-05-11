@@ -17,7 +17,7 @@ public:
     EEGMarker();
     ~EEGMarker();
 
-    void setup(ofApp* app);
+    void setup(ofApp* app, double lpp);
     void draw();
     void update(double lpp);
 
@@ -27,9 +27,12 @@ private:
     ofApp* _app;
     float _x;
     float _width;
-    int _vertexIndex;
+    int _firstVertexIndex;
+    int _lastVertexIndex;
     float _lastX;
     ofMatrix4x4 _meshMatrix;
+    double _money;
+    float _labelHeight;
 
     ofColor _markerColor;
     ofColor _markerFilling;
