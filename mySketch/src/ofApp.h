@@ -25,7 +25,9 @@ class ofApp : public ofBaseApp {
         const int REC_SAMPLE_RATE  = 44100;
         const int REC_CHANNELS = 2;
 
-        const float LPP_THRESHOLD = 0.000710264;
+        //const float LPP_THRESHOLD = 0.000710264; POUYAN
+        const float LPP_THRESHOLD = 0.00096785915213;
+
         //const float LPP_THRESHOLD = 0.000564972;
 
 		void setup();

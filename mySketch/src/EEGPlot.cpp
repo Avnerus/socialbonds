@@ -34,7 +34,7 @@ void EEGPlot::draw(int x, int y, int width, int height) {
     int yOffset = y + 20;
     int heightPerChannel = (height - 20 * channels.size()) / (channels.size()) ;
     for (int i=0; i < channels.size(); i++) {
-        channels[i].plot->draw(x, yOffset, width - 60, heightPerChannel);
+        channels[i].plot->draw(x, yOffset, width - 50, heightPerChannel);
         yOffset += heightPerChannel + 20;
     }
 }

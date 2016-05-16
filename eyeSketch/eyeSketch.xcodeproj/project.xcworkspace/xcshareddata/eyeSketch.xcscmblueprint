@@ -4,11 +4,13 @@
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "4131F34236DEB94090351DE98CD44A123F2873AB" : 0,
     "D7BD5E50F1992067E519EC37976C7921CC13709E" : 0,
     "A82C0ABFD7ACBB96A8DACF462A005A3A654155C7" : 0
   },
-  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "2642FB66-BF56-4CE4-9E2D-19037D39CA1C",
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "909794DD-BC05-4C42-9C03-A7DBEF185596",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "4131F34236DEB94090351DE98CD44A123F2873AB" : "..\/of_v0.9.3_osx_release\/addons\/ofxVideoRecorder",
     "D7BD5E50F1992067E519EC37976C7921CC13709E" : "socialbonds\/",
     "A82C0ABFD7ACBB96A8DACF462A005A3A654155C7" : "..\/of_v0.9.3_osx_release\/addons\/ofxSQLiteCpp"
   },
@@ -16,6 +18,11 @@
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
   "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "eyeSketch\/eyeSketch.xcodeproj",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/timscaffidi\/ofxVideoRecorder",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4131F34236DEB94090351DE98CD44A123F2873AB"
+    },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/bakercp\/ofxSQLiteCpp",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",

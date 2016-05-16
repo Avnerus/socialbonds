@@ -19,11 +19,12 @@ void EEGMarker::setup(ofApp* app, double value) {
     _firstVertexIndex = _lastVertexIndex;
 
     _meshMatrix = _app->getEEGPlot()->getChannelMeshMatrix(0, 0, 0, _app->WIDTH, _app->HEIGHT);
-
+ 
     ofVec3f worldVertex   = _app->getEEGPlot()->getChannelPlotMesh(0)->getVertex(_firstVertexIndex);
     ofVec3f screenVertex  = _app->getCamera()->worldToScreen(worldVertex);
     screenVertex = screenVertex * _meshMatrix;
     _x = _lastX = screenVertex.x - 50;
+    _width = 0;
 
     std::cout << "EEG Marker created!" << std::endl;
 
@@ -62,8 +63,8 @@ void EEGMarker::update(double value) {
             ofVec3f worldVertex   = _app->getEEGPlot()->getChannelPlotMesh(0)->getVertex(_lastVertexIndex);
             ofVec3f screenVertex  = _app->getCamera()->worldToScreen(worldVertex);
             screenVertex = screenVertex * _meshMatrix;
-            _width = screenVertex.x - 50;
             // We went out the screen, but can still decrease width
+            _width = screenVertex.x - 50;
         } else {
             std::cout << "Last Vertex index is " << _lastVertexIndex << "!" << "I'm finished" << std::endl;
             finished = true;

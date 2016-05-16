@@ -11,6 +11,7 @@
 		325A4A38195F9C5852A4605F /* Statement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BD7BCA886CC334212467705D /* Statement.cpp */; };
 		4F4285CE2433133BC6FD5DEC /* Database.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B057426B787220D6F9DCA84 /* Database.cpp */; };
 		55171B0B1B75F82824E60EE7 /* Backup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C12330F3349081F7B99F9224 /* Backup.cpp */; };
+		5D2C30CF96A15AE2D9793C63 /* ofxVideoRecorder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 628FE1FC6833D249D5B83C79 /* ofxVideoRecorder.cpp */; };
 		86B715626F5235FBD16BA3BC /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = D25C811DB2E35E08F138B5E7 /* sqlite3.c */; };
 		CA0199A9397CB983C7BE5179 /* Transaction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 41EF3634A1442EB47E8502F8 /* Transaction.cpp */; };
 		D4005489016C2E2E19FAF4C2 /* Column.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0FE7F1EE9361E8855E8FE6F /* Column.cpp */; };
@@ -53,6 +54,7 @@
 		41EF3634A1442EB47E8502F8 /* Transaction.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Transaction.cpp; path = ../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/src/Transaction.cpp; sourceTree = SOURCE_ROOT; };
 		4B057426B787220D6F9DCA84 /* Database.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Database.cpp; path = ../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/src/Database.cpp; sourceTree = SOURCE_ROOT; };
 		5BF24BE7FCA72931A35F068B /* Column.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Column.h; path = ../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/include/SQLiteCpp/Column.h; sourceTree = SOURCE_ROOT; };
+		628FE1FC6833D249D5B83C79 /* ofxVideoRecorder.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxVideoRecorder.cpp; path = ../../../of_v0.9.3_osx_release/addons/ofxVideoRecorder/src/ofxVideoRecorder.cpp; sourceTree = SOURCE_ROOT; };
 		6FF038062FC6A94ECE88F4B1 /* SQLiteCppUtils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SQLiteCppUtils.h; path = ../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/src/SQLiteCppUtils.h; sourceTree = SOURCE_ROOT; };
 		7CD5163A01AFC732A72A8FDA /* SQLiteCpp.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SQLiteCpp.h; path = ../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/include/SQLiteCpp/SQLiteCpp.h; sourceTree = SOURCE_ROOT; };
 		9666F457B9C6B332B911409C /* sqlite3.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = sqlite3.h; path = ../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/sqlite3/sqlite3.h; sourceTree = SOURCE_ROOT; };
@@ -73,6 +75,7 @@
 		E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; path = "openFrameworks-Info.plist"; sourceTree = "<group>"; };
 		E4EB691F138AFCF100A09F29 /* CoreOF.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = CoreOF.xcconfig; path = ../../../of_v0.9.3_osx_release/libs/openFrameworksCompiled/project/osx/CoreOF.xcconfig; sourceTree = SOURCE_ROOT; };
 		E4EB6923138AFD0F00A09F29 /* Project.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
+		F0C70EE02EA66236896610BC /* ofxVideoRecorder.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxVideoRecorder.h; path = ../../../of_v0.9.3_osx_release/addons/ofxVideoRecorder/src/ofxVideoRecorder.h; sourceTree = SOURCE_ROOT; };
 		F212A39F21CEE29EB9AB1BA5 /* Transaction.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Transaction.h; path = ../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/include/SQLiteCpp/Transaction.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -166,10 +169,28 @@
 			name = SQLiteCpp;
 			sourceTree = "<group>";
 		};
+		7652B9B7014C8450639DA55C /* ofxVideoRecorder */ = {
+			isa = PBXGroup;
+			children = (
+				89A809C09132402F1523C1C7 /* src */,
+			);
+			name = ofxVideoRecorder;
+			sourceTree = "<group>";
+		};
+		89A809C09132402F1523C1C7 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				628FE1FC6833D249D5B83C79 /* ofxVideoRecorder.cpp */,
+				F0C70EE02EA66236896610BC /* ofxVideoRecorder.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
 				CE7609CF81F132F43DFD17F2 /* ofxSQLiteCpp */,
+				7652B9B7014C8450639DA55C /* ofxVideoRecorder */,
 			);
 			name = addons;
 			sourceTree = "<group>";
@@ -319,6 +340,7 @@
 				4F4285CE2433133BC6FD5DEC /* Database.cpp in Sources */,
 				325A4A38195F9C5852A4605F /* Statement.cpp in Sources */,
 				CA0199A9397CB983C7BE5179 /* Transaction.cpp in Sources */,
+				5D2C30CF96A15AE2D9793C63 /* ofxVideoRecorder.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +384,7 @@
 					../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/sqlite3,
 					../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/src,
 					../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/src,
+					../../../of_v0.9.3_osx_release/addons/ofxVideoRecorder/src,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
@@ -403,6 +426,7 @@
 					../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/sqlite3,
 					../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/src,
 					../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/src,
+					../../../of_v0.9.3_osx_release/addons/ofxVideoRecorder/src,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				OTHER_CPLUSPLUSFLAGS = (
@@ -437,6 +461,7 @@
 					../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/sqlite3,
 					../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/src,
 					../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/src,
+					../../../of_v0.9.3_osx_release/addons/ofxVideoRecorder/src,
 					/usr/local/include,
 				);
 				ICON = "$(ICON_NAME_DEBUG)";
@@ -472,6 +497,7 @@
 					../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/sqlite3,
 					../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/src,
 					../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/src,
+					../../../of_v0.9.3_osx_release/addons/ofxVideoRecorder/src,
 					/usr/local/include,
 				);
 				ICON = "$(ICON_NAME_RELEASE)";

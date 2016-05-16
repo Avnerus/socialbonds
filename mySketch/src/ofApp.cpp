@@ -28,7 +28,7 @@ void ofApp::setup(){
     try {
 
         // Open EEG Dataset
-        std::string eegDB = ofToDataPath("pouyan_eeg.db", true);
+        std::string eegDB = ofToDataPath("matti_eeg.db", true);
 
         _database = new SQLite::Database(eegDB);
 
