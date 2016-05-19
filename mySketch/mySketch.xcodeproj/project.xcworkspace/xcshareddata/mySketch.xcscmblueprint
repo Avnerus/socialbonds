@@ -10,12 +10,12 @@
     "A82C0ABFD7ACBB96A8DACF462A005A3A654155C7" : 0,
     "D7BD5E50F1992067E519EC37976C7921CC13709E" : 0
   },
-  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "35271847-02EC-4E8A-A021-C67B77CCF906",
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "95CC8AF3-E207-4C79-BABC-227800E331E9",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "A5A4285D2F6B7A4B860C34CF3CA994E2BA6F338D" : "..\/of_v0.9.3_osx_release\/addons\/ofxNetworkSync",
-    "4131F34236DEB94090351DE98CD44A123F2873AB" : "..\/of_v0.9.3_osx_release\/addons\/ofxVideoRecorder",
-    "E81A77933AFC2C2569CCA3E5B22E9EEE7CC14B2F" : "..\/of_v0.9.3_osx_release\/addons\/ofxHistoryPlot",
-    "A82C0ABFD7ACBB96A8DACF462A005A3A654155C7" : "..\/of_v0.9.3_osx_release\/addons\/ofxSQLiteCpp",
+    "A5A4285D2F6B7A4B860C34CF3CA994E2BA6F338D" : "..\/Code\/of_v0.9.3_osx_release\/addons\/ofxNetworkSync",
+    "4131F34236DEB94090351DE98CD44A123F2873AB" : "..\/Code\/of_v0.9.3_osx_release\/addons\/ofxVideoRecorder",
+    "E81A77933AFC2C2569CCA3E5B22E9EEE7CC14B2F" : "..\/Code\/of_v0.9.3_osx_release\/addons\/ofxHistoryPlot",
+    "A82C0ABFD7ACBB96A8DACF462A005A3A654155C7" : "..\/Code\/of_v0.9.3_osx_release\/addons\/ofxSQLiteCpp",
     "D7BD5E50F1992067E519EC37976C7921CC13709E" : "socialbonds\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "mySketch",
@@ -38,12 +38,12 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A82C0ABFD7ACBB96A8DACF462A005A3A654155C7"
     },
     {
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/avnerus\/socialbonds",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Avnerus\/socialbonds",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D7BD5E50F1992067E519EC37976C7921CC13709E"
     },
     {
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Avnerus\/ofxHistoryPlot",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/avnerus\/ofxHistoryPlot",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E81A77933AFC2C2569CCA3E5B22E9EEE7CC14B2F"
     }

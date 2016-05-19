@@ -26,7 +26,7 @@ void EEGMarker::setup(ofApp* app, double value) {
     _x = _lastX = screenVertex.x - 50;
     _width = 0;
 
-    std::cout << "EEG Marker created!" << std::endl;
+    // std::cout << "EEG Marker created!" << std::endl;
 
     _money = value * 1000;
     _labelHeight = ofRandom(50,_app->HEIGHT - 50);
@@ -66,7 +66,7 @@ void EEGMarker::update(double value) {
             // We went out the screen, but can still decrease width
             _width = screenVertex.x - 50;
         } else {
-            std::cout << "Last Vertex index is " << _lastVertexIndex << "!" << "I'm finished" << std::endl;
+            // std::cout << "Last Vertex index is " << _lastVertexIndex << "!" << "I'm finished" << std::endl;
             finished = true;
         }
     } else {
@@ -85,5 +85,5 @@ void EEGMarker::update(double value) {
 
 
 EEGMarker::~EEGMarker() {
-    std::cout << "Marker destroyed!!" << std::endl;
+    // std::cout << "Marker destroyed!!" << std::endl;
 }

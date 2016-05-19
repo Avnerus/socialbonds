@@ -115,11 +115,11 @@ void ofApp::update(){
     for (int i = 0; i < numToRead && !_queryDone; i++) {
         if (_query->executeStep()) {
             for (int channel = 0; channel < EEG_CHANNELS; channel++) {
-                double value = _query->getColumn(channel);
+                double value = _query->getColumn(channel + 1);
                 _eegPlot->update(channel,value * 5000.0);
                 _eegSound->update(channel,value * 5000.0);
             }
-            double lpp = _query->getColumn(10); // Last column is LPP
+            double lpp = _query->getColumn(11); // Last column is LPP
             //std::cout << lpp << std::endl;
             if (lpp > LPP_THRESHOLD) {
                 thresholdPassed = true;
