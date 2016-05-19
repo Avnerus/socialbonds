@@ -27,6 +27,7 @@ class ofApp : public ofBaseApp {
         //const int HEIGHT = 2880;
         int SERVER_PORT = 9540;
         int START_OFFSET_SEC = 10;
+        int RESTART_TIME_SEC = 3005;
         
         int WIDTH = 1920;
         int HEIGHT = 1080;
@@ -49,6 +50,7 @@ class ofApp : public ofBaseApp {
         void exit();
 
         void reset();
+        void restart();
 
 		void keyPressed(int key);
 		void keyReleased(int key);
@@ -80,6 +82,8 @@ class ofApp : public ofBaseApp {
         int _eegPerLastFrame;
         bool _queryDone;
         int _x =  WIDTH / -2;
+
+        int _eegRestartFrame;
 
         EEGPlot* _eegPlot;
         EEGSound* _eegSound;

@@ -47,6 +47,8 @@ void ofApp::setup(){
     _eegPerFrame = EEG_RATE / FRAME_RATE;
     _eegPerLastFrame = EEG_RATE / FRAME_RATE + (EEG_RATE % FRAME_RATE);
 
+    _eegRestartFrame = EEG_RATE * RESTART_TIME_SEC;
+
     std::cout << "EEG Samples per frame: " << _eegPerFrame << ". Last frame: " << _eegPerLastFrame << endl;
 
     try {
@@ -153,6 +155,7 @@ void ofApp::update(){
                 _queryDone = true;
                 vidRecorder.close();
                 _nowRecording = false;
+                restart();
             }
         }
 
@@ -191,6 +194,11 @@ void ofApp::update(){
         }
 
         _markers.erase( std::remove_if(_markers.begin(), _markers.end(), markerFinished), _markers.end() );
+
+        int lastId = _query->getColumn(0);
+        if (lastId >= _eegRestartFrame) {
+            restart();
+        }
     }
 
 
@@ -249,6 +257,22 @@ void ofApp::reset() {
     _queryDone = false;
 }
 
+void ofApp::restart() {
+    _startTime = ofGetElapsedTimeMillis() + 2000;
+    _appState = PREPARING;
+    reset();
+
+    std::cout << "Sending PLAY message" << std::endl;
+    // Start presentation
+    for (auto & client : _server.getClients()) {
+        std::cout << client->isCalibrated() << std::endl;
+        if(client->isCalibrated()){
+            client->send("PLAY "+ofToString(ofGetElapsedTimeMillis()+2000) + "," + ofToString(START_OFFSET_SEC));
+            std::cout << "Send to client " << client->getClientID() << std::endl;
+        }
+    }
+}
+
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
 
@@ -262,19 +286,7 @@ void ofApp::keyReleased(int key){
     } 
 
     if (key == 'p') {
-        _startTime = ofGetElapsedTimeMillis() + 2000;
-        _appState = PREPARING;
-        reset();
-
-        std::cout << "Sending PLAY message" << std::endl;
-        // Start presentation
-        for (auto & client : _server.getClients()) {
-            std::cout << client->isCalibrated() << std::endl;
-            if(client->isCalibrated()){
-                client->send("PLAY "+ofToString(ofGetElapsedTimeMillis()+2000) + "," + ofToString(START_OFFSET_SEC));
-                std::cout << "Send to client " << client->getClientID() << std::endl;
-            }
-        }
+        restart();
     } 
 }
 
