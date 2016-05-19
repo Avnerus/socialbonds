@@ -6,6 +6,7 @@
 #include "EEGSound.h"
 #include "EEGMarker.h"
 #include "ofxVideoRecorder.h"
+#include "ofxNetworkSync.h"
 
 class EEGMarker;
 
@@ -18,6 +19,7 @@ class ofApp : public ofBaseApp {
         const int EEG_CHANNELS = 9;
         const int WIDTH = 5120;
         const int HEIGHT = 2880;
+        const int SERVER_PORT = 9540;
         
        // const int WIDTH = 1920;
        // const int HEIGHT = 1080;
@@ -56,6 +58,7 @@ class ofApp : public ofBaseApp {
         EEGPlot* getEEGPlot();
 
         ofCamera* getCamera();
+        ofxNetworkSyncServer _server;
 
     private:
         SQLite::Statement* _query;

@@ -15,6 +15,11 @@ void ofApp::setup(){
 
     ofSetFrameRate(FRAME_RATE);
 
+    // This is the network server
+    bool result = _server.setup(9540);
+
+    std::cout << "Network server startup result: " << result << std::endl;
+
     _cam.setupPerspective();
     _blink = false;
 
