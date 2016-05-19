@@ -1,7 +1,7 @@
 {
     "serverPort" : 9540,
-    "startOffsetSec" : 3000,
+    "startOffsetSec" : 60,
     "width" : 1920,
     "height": 1080,
-    "endTimeSec": 3005
+    "endTimeSec": 2400
 }
