@@ -14,6 +14,7 @@ class EEGPlot {
         void update(int index, float value);
         void draw(int x, int y, int width, int height);
         void appendChannel(std::string name);
+        void reset();
 
         ofMatrix4x4 getChannelMeshMatrix(int index, int x, int y, int width, int height);
 

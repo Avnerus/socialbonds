@@ -7,8 +7,14 @@
 #include "EEGMarker.h"
 #include "ofxVideoRecorder.h"
 #include "ofxNetworkSync.h"
+#include "ofxJSON.h"
 
 class EEGMarker;
+
+enum State {
+    RUNNING,
+    PREPARING
+};
 
 
 class ofApp : public ofBaseApp {
@@ -19,10 +25,11 @@ class ofApp : public ofBaseApp {
         const int EEG_CHANNELS = 9;
         //const int WIDTH = 5120;
         //const int HEIGHT = 2880;
-        const int SERVER_PORT = 9540;
+        int SERVER_PORT = 9540;
+        int START_OFFSET_SEC = 10;
         
-        const int WIDTH = 1024;
-        const int HEIGHT = 768;
+        int WIDTH = 1920;
+        int HEIGHT = 1080;
         
         const int REC_SAMPLE_RATE  = 44100;
         const int REC_CHANNELS = 2;
@@ -32,11 +39,16 @@ class ofApp : public ofBaseApp {
         const float LPP_THRESHOLD = 0.00029921558638;
 
         //const float LPP_THRESHOLD = 0.000564972;
+        //
+
+        ofApp();
 
 		void setup();
 		void update();
 		void draw();
         void exit();
+
+        void reset();
 
 		void keyPressed(int key);
 		void keyReleased(int key);
@@ -59,9 +71,10 @@ class ofApp : public ofBaseApp {
 
         ofCamera* getCamera();
         ofxNetworkSyncServer _server;
+        ofxJSONElement _config;
 
     private:
-        SQLite::Statement* _query;
+        std::shared_ptr<SQLite::Statement> _query;
         SQLite::Database* _database;
         int _eegPerFrame;
         int _eegPerLastFrame;
@@ -87,4 +100,7 @@ class ofApp : public ofBaseApp {
         bool _nowRecording;
 
         bool _blink;
+
+        State _appState;
+        uint64_t _startTime;
 };

@@ -30,6 +30,12 @@ void EEGPlot::update(int index, float value) {
     channels[index].plot->update(value);	//manually add values to the plot
 }
 
+void EEGPlot::reset() {
+    for (int i=0; i < channels.size(); i++) {
+        channels[i].plot->reset();
+    }
+}
+
 void EEGPlot::draw(int x, int y, int width, int height) {
     int yOffset = y + 20;
     int heightPerChannel = (height - 20 * channels.size()) / (channels.size()) ;

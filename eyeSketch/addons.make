@@ -1,2 +1,4 @@
+ofxNetwork
+ofxNetworkSync
 ofxSQLiteCpp
 ofxVideoRecorder

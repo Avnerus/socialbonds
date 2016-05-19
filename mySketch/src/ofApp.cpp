@@ -4,6 +4,19 @@ bool markerFinished(std::shared_ptr<EEGMarker>& marker) {
     return marker->finished;
 }
 
+ofApp::ofApp() {
+    bool parsingSuccessful = _config.open("config.json");
+    if (parsingSuccessful) {
+        ofLogNotice("ofApp::setup") << _config.getRawString() << std::endl;
+        HEIGHT = _config["height"].asInt();
+        WIDTH = _config["width"].asInt();
+        START_OFFSET_SEC = _config["startOffsetSec"].asInt();
+        SERVER_PORT = _config["serverPort"].asInt();
+    } else {
+        ofLogError("ofApp::setup") << "Failed to parse JSON config" << std::endl;
+    }
+}
+
 //--------------------------------------------------------------
 void ofApp::setup(){
 
@@ -13,7 +26,13 @@ void ofApp::setup(){
     ofSetColor(255,255,255); 
     ofSetVerticalSync(true);
 
+//    ofSetLogLevel(OF_LOG_VERBOSE);
+
     ofSetFrameRate(FRAME_RATE);
+
+    _font.load("Verdana.ttf", 36);
+
+    _appState = PREPARING;
 
     // This is the network server
     bool result = _server.setup(9540);
@@ -36,10 +55,6 @@ void ofApp::setup(){
         std::string eegDB = ofToDataPath("matti_eeg.db", true);
 
         _database = new SQLite::Database(eegDB);
-
-        _query = new SQLite::Statement(*(_database), "SELECT * from data");
-        _queryDone = false;
-
     }
 
     catch (std::exception& e) {
@@ -82,6 +97,8 @@ void ofApp::setup(){
         vidRecorder.start();
     }
 
+    _startTime = 0;
+
 }
 
 //--------------------------------------------------------------
@@ -98,81 +115,87 @@ void ofApp::update(){
             ofLogWarning("The video recorder failed to write some audio samples!");
         }
     }
-    
 
-    std::stringstream strm;
-	strm << "fps: " << ofGetFrameRate();
-	ofSetWindowTitle(strm.str());
-    int numToRead = _eegPerFrame;
+    if(_server.isConnected()){
+		_server.update();
+	}
+    if (_appState == PREPARING) {
+        if (_startTime > 0 && ofGetElapsedTimeMillis() >= _startTime) {
+            _appState = RUNNING;
+        }
+    } 
+    if (_appState == RUNNING) {
+        int numToRead = _eegPerFrame;
 
-    if (ofGetFrameNum() % 59 == 0) {
-        numToRead = _eegPerLastFrame;
-    }
+        if (ofGetFrameNum() % 59 == 0) {
+            numToRead = _eegPerLastFrame;
+        }
 
-    bool thresholdPassed = false;   
-    double biggestValue = 0;
+        bool thresholdPassed = false;   
+        double biggestValue = 0;
 
-    for (int i = 0; i < numToRead && !_queryDone; i++) {
-        if (_query->executeStep()) {
-            for (int channel = 0; channel < EEG_CHANNELS; channel++) {
-                double value = _query->getColumn(channel + 1);
-                _eegPlot->update(channel,value * 5000.0);
-                _eegSound->update(channel,value * 5000.0);
-            }
-            double lpp = _query->getColumn(11); // Last column is LPP
-            //std::cout << lpp << std::endl;
-            if (lpp > LPP_THRESHOLD) {
-                thresholdPassed = true;
-                if (lpp > biggestValue) {
-                    biggestValue = lpp;
+        for (int i = 0; i < numToRead && !_queryDone; i++) {
+            if (_query->executeStep()) {
+                for (int channel = 0; channel < EEG_CHANNELS; channel++) {
+                    double value = _query->getColumn(channel + 1);
+                    _eegPlot->update(channel,value * 5000.0);
+                    _eegSound->update(channel,value * 5000.0);
                 }
+                double lpp = _query->getColumn(11); // Last column is LPP
+                //std::cout << lpp << std::endl;
+                if (lpp > LPP_THRESHOLD) {
+                    thresholdPassed = true;
+                    if (lpp > biggestValue) {
+                        biggestValue = lpp;
+                    }
+                }
+            } else {
+                _queryDone = true;
+                vidRecorder.close();
+                _nowRecording = false;
             }
-        } else {
-            _queryDone = true;
-            vidRecorder.close();
-            _nowRecording = false;
         }
-    }
 
-    if (thresholdPassed) {
-        // Passed the threshold
-        if (_liveMarker) {
-            _liveMarker->update(biggestValue);
-        } else {
-            // Create a new marker
-            std::shared_ptr<EEGMarker> marker(new EEGMarker());
-            marker->setup(this, biggestValue);
-            _markers.push_back(marker);
-            _liveMarker = marker;
-        }
-        if (!_blink) {
-            _blink = true;
-            ofSetBackgroundColor(255,255,255);
-            _eegSound->updateLPP(1.0);
+        if (thresholdPassed) {
+            // Passed the threshold
+            if (_liveMarker) {
+                _liveMarker->update(biggestValue);
+            } else {
+                // Create a new marker
+                std::shared_ptr<EEGMarker> marker(new EEGMarker());
+                marker->setup(this, biggestValue);
+                _markers.push_back(marker);
+                _liveMarker = marker;
+            }
+            if (!_blink) {
+                _blink = true;
+                ofSetBackgroundColor(255,255,255);
+                _eegSound->updateLPP(1.0);
+            } else {
+                ofSetBackgroundColor(0,0,0);
+                _blink = false;
+            }
         } else {
             ofSetBackgroundColor(0,0,0);
             _blink = false;
+            if (_liveMarker) {
+                //std::cout << "No more live marker" << std::endl;
+                _liveMarker = nullptr;
+            }
         }
-    } else {
-        ofSetBackgroundColor(0,0,0);
-        _blink = false;
-        if (_liveMarker) {
-            //std::cout << "No more live marker" << std::endl;
-            _liveMarker = nullptr;
+
+        for (auto & marker : _markers) {
+            if (marker != _liveMarker) {
+                marker->update(0);
+            } 
         }
+
+        _markers.erase( std::remove_if(_markers.begin(), _markers.end(), markerFinished), _markers.end() );
     }
 
-    for (auto & marker : _markers) {
-        if (marker != _liveMarker) {
-            marker->update(0);
-        } 
-    }
-
-    _markers.erase( std::remove_if(_markers.begin(), _markers.end(), markerFinished), _markers.end() );
 
     _cam.setPosition(WIDTH / 2, HEIGHT / 2, _cam.getPosition().z);
     
-    _font.load("Verdana.ttf", 36);
 }
 
 int ofApp::getNumberOfSamplesPerFrame() {
@@ -186,18 +209,23 @@ ofTrueTypeFont* ofApp::getFont() {
 //--------------------------------------------------------------
 void ofApp::draw(){
 
+    if (_appState == PREPARING) {
+        ofSetColor(255,255,255);
+        ofDrawRectangle(WIDTH / 2 - 100, HEIGHT / 2 - 100, 200, 200);
+    } else {
+        ofSetColor(0,0,0);
+        ofDrawRectangle(WIDTH - 60, 0, 60, HEIGHT);
 
-    ofSetColor(0,0,0);
-    ofDrawRectangle(WIDTH - 60, 0, 60, HEIGHT);
+        _cam.begin();
+        _eegPlot->draw(0, 0, WIDTH, HEIGHT);
+        _cam.end();
 
-    _cam.begin();
-    _eegPlot->draw(0, 0, WIDTH, HEIGHT);
-    _cam.end();
+        for (auto & marker : _markers) {
+            if (!marker->finished) {
+                marker->draw();
+            } 
+        }
 
-    for (auto & marker : _markers) {
-        if (!marker->finished) {
-            marker->draw();
-        } 
     }
 
     if (_nowRecording) {
@@ -207,6 +235,18 @@ void ofApp::draw(){
         vidRecorder.addFrame(_pix);
         _rgbFbo.draw(0,0);
     }
+}
+
+void ofApp::reset() {
+    std::cout << "Performing RESET" << std::endl;
+    _markers.clear();
+    _liveMarker = nullptr;
+    _eegPlot->reset();
+
+    std::string resetQuery  = "SELECT * from data WHERE id >= " + ofToString(START_OFFSET_SEC * EEG_RATE); // id is 500 in a sec
+    std::cout << resetQuery << std::endl;
+    _query = std::make_shared<SQLite::Statement>(*(_database), resetQuery);
+    _queryDone = false;
 }
 
 //--------------------------------------------------------------
@@ -219,6 +259,22 @@ void ofApp::keyReleased(int key){
     if (key == 'v') {
         vidRecorder.close();
         _nowRecording = false;
+    } 
+
+    if (key == 'p') {
+        _startTime = ofGetElapsedTimeMillis() + 2000;
+        _appState = PREPARING;
+        reset();
+
+        std::cout << "Sending PLAY message" << std::endl;
+        // Start presentation
+        for (auto & client : _server.getClients()) {
+            std::cout << client->isCalibrated() << std::endl;
+            if(client->isCalibrated()){
+                client->send("PLAY "+ofToString(ofGetElapsedTimeMillis()+2000) + "," + ofToString(START_OFFSET_SEC));
+                std::cout << "Send to client " << client->getClientID() << std::endl;
+            }
+        }
     } 
 }
 

@@ -4,15 +4,17 @@
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "A5A4285D2F6B7A4B860C34CF3CA994E2BA6F338D" : 0,
     "4131F34236DEB94090351DE98CD44A123F2873AB" : 0,
-    "D7BD5E50F1992067E519EC37976C7921CC13709E" : 0,
-    "A82C0ABFD7ACBB96A8DACF462A005A3A654155C7" : 0
+    "A82C0ABFD7ACBB96A8DACF462A005A3A654155C7" : 0,
+    "D7BD5E50F1992067E519EC37976C7921CC13709E" : 0
   },
-  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "909794DD-BC05-4C42-9C03-A7DBEF185596",
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "A4FC9006-83F3-4A7B-A58E-46B69CFD6D18",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "A5A4285D2F6B7A4B860C34CF3CA994E2BA6F338D" : "..\/of_v0.9.3_osx_release\/addons\/ofxNetworkSync",
     "4131F34236DEB94090351DE98CD44A123F2873AB" : "..\/of_v0.9.3_osx_release\/addons\/ofxVideoRecorder",
-    "D7BD5E50F1992067E519EC37976C7921CC13709E" : "socialbonds\/",
-    "A82C0ABFD7ACBB96A8DACF462A005A3A654155C7" : "..\/of_v0.9.3_osx_release\/addons\/ofxSQLiteCpp"
+    "A82C0ABFD7ACBB96A8DACF462A005A3A654155C7" : "..\/of_v0.9.3_osx_release\/addons\/ofxSQLiteCpp",
+    "D7BD5E50F1992067E519EC37976C7921CC13709E" : "socialbonds\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "eyeSketch",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
@@ -22,6 +24,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/timscaffidi\/ofxVideoRecorder",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4131F34236DEB94090351DE98CD44A123F2873AB"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/anagma\/ofxNetworkSync",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A5A4285D2F6B7A4B860C34CF3CA994E2BA6F338D"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/bakercp\/ofxSQLiteCpp",

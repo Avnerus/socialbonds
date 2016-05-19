@@ -8,16 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		0CE92797F0951E511964B1FE /* SQLiteCppUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCF815FE83CDF6F8ABE6945D /* SQLiteCppUtils.cpp */; };
+		1140B11DCD9501E3509921C4 /* ofxTCPManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0909A8CCE11810BE9C2C01AB /* ofxTCPManager.cpp */; };
+		1492869BE886BC51582C5E8E /* ofxNetworkSyncClientState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 674041D45E53E3F6539D78A2 /* ofxNetworkSyncClientState.cpp */; };
+		1A54591FEF5E83385E541409 /* ofxNetworkSyncServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A9A1924CD655396E1980602 /* ofxNetworkSyncServer.cpp */; };
 		325A4A38195F9C5852A4605F /* Statement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BD7BCA886CC334212467705D /* Statement.cpp */; };
 		4F4285CE2433133BC6FD5DEC /* Database.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B057426B787220D6F9DCA84 /* Database.cpp */; };
+		50B0559B3F5DB0498F9B41E7 /* ofxTCPClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E392F5F028BB8BB7D6E0A62 /* ofxTCPClient.cpp */; };
 		55171B0B1B75F82824E60EE7 /* Backup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C12330F3349081F7B99F9224 /* Backup.cpp */; };
 		5D2C30CF96A15AE2D9793C63 /* ofxVideoRecorder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 628FE1FC6833D249D5B83C79 /* ofxVideoRecorder.cpp */; };
+		70A46E3451F190970FCF32BE /* ofxUDPManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2145A267632A256776F036F7 /* ofxUDPManager.cpp */; };
 		86B715626F5235FBD16BA3BC /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = D25C811DB2E35E08F138B5E7 /* sqlite3.c */; };
 		CA0199A9397CB983C7BE5179 /* Transaction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 41EF3634A1442EB47E8502F8 /* Transaction.cpp */; };
+		D326A2063196A5ACABEDB9BF /* ofxNetworkSyncUdp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9511043BC707971E6E470F4A /* ofxNetworkSyncUdp.cpp */; };
 		D4005489016C2E2E19FAF4C2 /* Column.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0FE7F1EE9361E8855E8FE6F /* Column.cpp */; };
+		D69A03749CB46596E97C8DD4 /* ofxNetworkSyncClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D61C7E6EC774A4E51578321 /* ofxNetworkSyncClient.cpp */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
 		E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1D0A3A1BDC003C02F2 /* main.cpp */; };
 		E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */; };
+		F9A49A0F43D4064C29A40551 /* ofxTCPServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A49A07FCDB450BC05AA03DC /* ofxTCPServer.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,16 +58,37 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		02345011647FC5AFCD49AB0D /* ofxNetworkSyncUdp.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxNetworkSyncUdp.h; path = ../../../of_v0.9.3_osx_release/addons/ofxNetworkSync/src/ofxNetworkSyncUdp.h; sourceTree = SOURCE_ROOT; };
+		0909A8CCE11810BE9C2C01AB /* ofxTCPManager.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxTCPManager.cpp; path = ../../../of_v0.9.3_osx_release/addons/ofxNetwork/src/ofxTCPManager.cpp; sourceTree = SOURCE_ROOT; };
+		0E05544168F6F780D97FEFAD /* ofxNetworkUtils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxNetworkUtils.h; path = ../../../of_v0.9.3_osx_release/addons/ofxNetwork/src/ofxNetworkUtils.h; sourceTree = SOURCE_ROOT; };
+		123EC3F6893368022971277A /* ofxUDPManager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUDPManager.h; path = ../../../of_v0.9.3_osx_release/addons/ofxNetwork/src/ofxUDPManager.h; sourceTree = SOURCE_ROOT; };
+		1A49A07FCDB450BC05AA03DC /* ofxTCPServer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxTCPServer.cpp; path = ../../../of_v0.9.3_osx_release/addons/ofxNetwork/src/ofxTCPServer.cpp; sourceTree = SOURCE_ROOT; };
+		2145A267632A256776F036F7 /* ofxUDPManager.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUDPManager.cpp; path = ../../../of_v0.9.3_osx_release/addons/ofxNetwork/src/ofxUDPManager.cpp; sourceTree = SOURCE_ROOT; };
 		2C02E386EBA89216B14FFB28 /* Database.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Database.h; path = ../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/include/SQLiteCpp/Database.h; sourceTree = SOURCE_ROOT; };
 		41EF3634A1442EB47E8502F8 /* Transaction.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Transaction.cpp; path = ../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/src/Transaction.cpp; sourceTree = SOURCE_ROOT; };
+		4A9A1924CD655396E1980602 /* ofxNetworkSyncServer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxNetworkSyncServer.cpp; path = ../../../of_v0.9.3_osx_release/addons/ofxNetworkSync/src/ofxNetworkSyncServer.cpp; sourceTree = SOURCE_ROOT; };
 		4B057426B787220D6F9DCA84 /* Database.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Database.cpp; path = ../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/src/Database.cpp; sourceTree = SOURCE_ROOT; };
+		4BE497EDD496D3DAA3B65A86 /* ofxTCPManager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxTCPManager.h; path = ../../../of_v0.9.3_osx_release/addons/ofxNetwork/src/ofxTCPManager.h; sourceTree = SOURCE_ROOT; };
+		4D61C7E6EC774A4E51578321 /* ofxNetworkSyncClient.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxNetworkSyncClient.cpp; path = ../../../of_v0.9.3_osx_release/addons/ofxNetworkSync/src/ofxNetworkSyncClient.cpp; sourceTree = SOURCE_ROOT; };
+		4F292A3BB92CD9562479E83D /* ofxTCPServer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxTCPServer.h; path = ../../../of_v0.9.3_osx_release/addons/ofxNetwork/src/ofxTCPServer.h; sourceTree = SOURCE_ROOT; };
+		529850F96871A7A7C22FF459 /* ofxNetworkSyncServerFinder.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxNetworkSyncServerFinder.h; path = ../../../of_v0.9.3_osx_release/addons/ofxNetworkSync/src/ofxNetworkSyncServerFinder.h; sourceTree = SOURCE_ROOT; };
+		55E602BB13E121B26B757E11 /* ofxNetworkSyncConstants.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxNetworkSyncConstants.h; path = ../../../of_v0.9.3_osx_release/addons/ofxNetworkSync/src/ofxNetworkSyncConstants.h; sourceTree = SOURCE_ROOT; };
 		5BF24BE7FCA72931A35F068B /* Column.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Column.h; path = ../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/include/SQLiteCpp/Column.h; sourceTree = SOURCE_ROOT; };
 		628FE1FC6833D249D5B83C79 /* ofxVideoRecorder.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxVideoRecorder.cpp; path = ../../../of_v0.9.3_osx_release/addons/ofxVideoRecorder/src/ofxVideoRecorder.cpp; sourceTree = SOURCE_ROOT; };
+		674041D45E53E3F6539D78A2 /* ofxNetworkSyncClientState.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxNetworkSyncClientState.cpp; path = ../../../of_v0.9.3_osx_release/addons/ofxNetworkSync/src/ofxNetworkSyncClientState.cpp; sourceTree = SOURCE_ROOT; };
+		67FD3470238FC24C4810EFC3 /* ofxNetworkSync.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxNetworkSync.h; path = ../../../of_v0.9.3_osx_release/addons/ofxNetworkSync/src/ofxNetworkSync.h; sourceTree = SOURCE_ROOT; };
+		6E392F5F028BB8BB7D6E0A62 /* ofxTCPClient.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxTCPClient.cpp; path = ../../../of_v0.9.3_osx_release/addons/ofxNetwork/src/ofxTCPClient.cpp; sourceTree = SOURCE_ROOT; };
 		6FF038062FC6A94ECE88F4B1 /* SQLiteCppUtils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SQLiteCppUtils.h; path = ../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/src/SQLiteCppUtils.h; sourceTree = SOURCE_ROOT; };
+		771219610C0FCAE6F2DFD0A2 /* ofxNetworkSyncClient.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxNetworkSyncClient.h; path = ../../../of_v0.9.3_osx_release/addons/ofxNetworkSync/src/ofxNetworkSyncClient.h; sourceTree = SOURCE_ROOT; };
+		7A53A5DFFFC4F0283600E811 /* ofxNetworkSyncClientState.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxNetworkSyncClientState.h; path = ../../../of_v0.9.3_osx_release/addons/ofxNetworkSync/src/ofxNetworkSyncClientState.h; sourceTree = SOURCE_ROOT; };
 		7CD5163A01AFC732A72A8FDA /* SQLiteCpp.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SQLiteCpp.h; path = ../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/include/SQLiteCpp/SQLiteCpp.h; sourceTree = SOURCE_ROOT; };
+		9511043BC707971E6E470F4A /* ofxNetworkSyncUdp.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxNetworkSyncUdp.cpp; path = ../../../of_v0.9.3_osx_release/addons/ofxNetworkSync/src/ofxNetworkSyncUdp.cpp; sourceTree = SOURCE_ROOT; };
+		957502566FA8E6A069A83373 /* ofxNetwork.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxNetwork.h; path = ../../../of_v0.9.3_osx_release/addons/ofxNetwork/src/ofxNetwork.h; sourceTree = SOURCE_ROOT; };
 		9666F457B9C6B332B911409C /* sqlite3.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = sqlite3.h; path = ../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/sqlite3/sqlite3.h; sourceTree = SOURCE_ROOT; };
 		993B7296159B52F82AA51462 /* Assertion.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Assertion.h; path = ../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/include/SQLiteCpp/Assertion.h; sourceTree = SOURCE_ROOT; };
+		9AE4CBEDB89BB6908A86C08A /* ofxNetworkSyncServer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxNetworkSyncServer.h; path = ../../../of_v0.9.3_osx_release/addons/ofxNetworkSync/src/ofxNetworkSyncServer.h; sourceTree = SOURCE_ROOT; };
 		A92B44728F329FA525FDE951 /* Statement.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Statement.h; path = ../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/include/SQLiteCpp/Statement.h; sourceTree = SOURCE_ROOT; };
+		B188EB58601C4ADAFA3AD9F5 /* ofxTCPClient.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxTCPClient.h; path = ../../../of_v0.9.3_osx_release/addons/ofxNetwork/src/ofxTCPClient.h; sourceTree = SOURCE_ROOT; };
 		BD7BCA886CC334212467705D /* Statement.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Statement.cpp; path = ../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/src/Statement.cpp; sourceTree = SOURCE_ROOT; };
 		C12330F3349081F7B99F9224 /* Backup.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Backup.cpp; path = ../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/src/Backup.cpp; sourceTree = SOURCE_ROOT; };
 		CA380992D4D7874318681394 /* Backup.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Backup.h; path = ../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/include/SQLiteCpp/Backup.h; sourceTree = SOURCE_ROOT; };
@@ -116,6 +145,14 @@
 			name = src;
 			sourceTree = "<group>";
 		};
+		18240ECCE4076FB0833A8578 /* ofxNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				219374A14594D121F27FED3A /* src */,
+			);
+			name = ofxNetwork;
+			sourceTree = "<group>";
+		};
 		1E6801F702E7BA3AF5A0D208 /* src */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +161,23 @@
 				4B057426B787220D6F9DCA84 /* Database.cpp */,
 				BD7BCA886CC334212467705D /* Statement.cpp */,
 				41EF3634A1442EB47E8502F8 /* Transaction.cpp */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		219374A14594D121F27FED3A /* src */ = {
+			isa = PBXGroup;
+			children = (
+				957502566FA8E6A069A83373 /* ofxNetwork.h */,
+				0E05544168F6F780D97FEFAD /* ofxNetworkUtils.h */,
+				6E392F5F028BB8BB7D6E0A62 /* ofxTCPClient.cpp */,
+				B188EB58601C4ADAFA3AD9F5 /* ofxTCPClient.h */,
+				0909A8CCE11810BE9C2C01AB /* ofxTCPManager.cpp */,
+				4BE497EDD496D3DAA3B65A86 /* ofxTCPManager.h */,
+				1A49A07FCDB450BC05AA03DC /* ofxTCPServer.cpp */,
+				4F292A3BB92CD9562479E83D /* ofxTCPServer.h */,
+				2145A267632A256776F036F7 /* ofxUDPManager.cpp */,
+				123EC3F6893368022971277A /* ofxUDPManager.h */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -189,6 +243,8 @@
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
+				18240ECCE4076FB0833A8578 /* ofxNetwork */,
+				DF19DA6AFB065663E82F05F4 /* ofxNetworkSync */,
 				CE7609CF81F132F43DFD17F2 /* ofxSQLiteCpp */,
 				7652B9B7014C8450639DA55C /* ofxVideoRecorder */,
 			);
@@ -202,6 +258,14 @@
 				1019F3C8AD8BD5AFFAF59802 /* libs */,
 			);
 			name = ofxSQLiteCpp;
+			sourceTree = "<group>";
+		};
+		DF19DA6AFB065663E82F05F4 /* ofxNetworkSync */ = {
+			isa = PBXGroup;
+			children = (
+				E5FD2A97269026CD58CFA5FD /* src */,
+			);
+			name = ofxNetworkSync;
 			sourceTree = "<group>";
 		};
 		E4328144138ABC890047C5CB /* Products */ = {
@@ -242,6 +306,24 @@
 				E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */,
 			);
 			name = openFrameworks;
+			sourceTree = "<group>";
+		};
+		E5FD2A97269026CD58CFA5FD /* src */ = {
+			isa = PBXGroup;
+			children = (
+				67FD3470238FC24C4810EFC3 /* ofxNetworkSync.h */,
+				4D61C7E6EC774A4E51578321 /* ofxNetworkSyncClient.cpp */,
+				771219610C0FCAE6F2DFD0A2 /* ofxNetworkSyncClient.h */,
+				674041D45E53E3F6539D78A2 /* ofxNetworkSyncClientState.cpp */,
+				7A53A5DFFFC4F0283600E811 /* ofxNetworkSyncClientState.h */,
+				55E602BB13E121B26B757E11 /* ofxNetworkSyncConstants.h */,
+				4A9A1924CD655396E1980602 /* ofxNetworkSyncServer.cpp */,
+				9AE4CBEDB89BB6908A86C08A /* ofxNetworkSyncServer.h */,
+				529850F96871A7A7C22FF459 /* ofxNetworkSyncServerFinder.h */,
+				9511043BC707971E6E470F4A /* ofxNetworkSyncUdp.cpp */,
+				02345011647FC5AFCD49AB0D /* ofxNetworkSyncUdp.h */,
+			);
+			name = src;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,6 +415,14 @@
 			files = (
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
+				50B0559B3F5DB0498F9B41E7 /* ofxTCPClient.cpp in Sources */,
+				1140B11DCD9501E3509921C4 /* ofxTCPManager.cpp in Sources */,
+				F9A49A0F43D4064C29A40551 /* ofxTCPServer.cpp in Sources */,
+				70A46E3451F190970FCF32BE /* ofxUDPManager.cpp in Sources */,
+				D69A03749CB46596E97C8DD4 /* ofxNetworkSyncClient.cpp in Sources */,
+				1492869BE886BC51582C5E8E /* ofxNetworkSyncClientState.cpp in Sources */,
+				1A54591FEF5E83385E541409 /* ofxNetworkSyncServer.cpp in Sources */,
+				D326A2063196A5ACABEDB9BF /* ofxNetworkSyncUdp.cpp in Sources */,
 				0CE92797F0951E511964B1FE /* SQLiteCppUtils.cpp in Sources */,
 				86B715626F5235FBD16BA3BC /* sqlite3.c in Sources */,
 				55171B0B1B75F82824E60EE7 /* Backup.cpp in Sources */,
@@ -377,6 +467,8 @@
 				HEADER_SEARCH_PATHS = (
 					"$(OF_CORE_HEADERS)",
 					src,
+					../../../of_v0.9.3_osx_release/addons/ofxNetwork/src,
+					../../../of_v0.9.3_osx_release/addons/ofxNetworkSync/src,
 					../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs,
 					../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp,
 					../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/include,
@@ -419,6 +511,8 @@
 				HEADER_SEARCH_PATHS = (
 					"$(OF_CORE_HEADERS)",
 					src,
+					../../../of_v0.9.3_osx_release/addons/ofxNetwork/src,
+					../../../of_v0.9.3_osx_release/addons/ofxNetworkSync/src,
 					../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs,
 					../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp,
 					../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/include,
@@ -454,6 +548,8 @@
 				HEADER_SEARCH_PATHS = (
 					"$(OF_CORE_HEADERS)",
 					src,
+					../../../of_v0.9.3_osx_release/addons/ofxNetwork/src,
+					../../../of_v0.9.3_osx_release/addons/ofxNetworkSync/src,
 					../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs,
 					../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp,
 					../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/include,
@@ -490,6 +586,8 @@
 				HEADER_SEARCH_PATHS = (
 					"$(OF_CORE_HEADERS)",
 					src,
+					../../../of_v0.9.3_osx_release/addons/ofxNetwork/src,
+					../../../of_v0.9.3_osx_release/addons/ofxNetworkSync/src,
 					../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs,
 					../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp,
 					../../../of_v0.9.3_osx_release/addons/ofxSQLiteCpp/libs/SQLiteCpp/include,

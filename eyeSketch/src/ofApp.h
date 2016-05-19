@@ -1,6 +1,7 @@
 #pragma once
 #include "SQLiteCpp.h"
 #include "ofxVideoRecorder.h"
+#include "ofxNetworkSync.h"
 
 const int FRAME_RATE = 25;
 const int EYE_RATE = 500;
@@ -8,6 +9,11 @@ const int WIDTH = 1920;
 const int HEIGHT = 1200;
 
 #include "ofMain.h"
+
+enum State {
+    RUNNING,
+    PREPARING
+};
 
 class ofApp : public ofBaseApp{
 
@@ -32,7 +38,13 @@ class ofApp : public ofBaseApp{
 
         void recordingComplete(ofxVideoRecorderOutputFileCompleteEventArgs& args);
 
+        void onMessageReceived(string & message);
+        void onServerFound(IpAndPort & info);
+
+        void reset();
+
     private:
+
         ofVideoPlayer _player;
         ofxVideoRecorder vidRecorder;
         bool _nowRecording;
@@ -40,12 +52,20 @@ class ofApp : public ofBaseApp{
         ofPixels _pix;
 
         bool _queryDone;
-        SQLite::Statement* _query;
+        std::shared_ptr<SQLite::Statement> _query;
         SQLite::Database* _eyeDB;
         int _eyePerFrame;
         int _eyePerLastFrame;
 
         double _eyeX;
         double _eyeY;
+        int _firstOnset;
+
+        ofxNetworkSyncServerFinder _finder;
+        ofxNetworkSyncClient _client;
+
+        State _appState;
+        uint64_t _startTime;
+        int _offsetSec;
 		
 };

@@ -1,4 +1,5 @@
 ofxHistoryPlot
+ofxJSON
 ofxNetwork
 ofxNetworkSync
 ofxOsc
