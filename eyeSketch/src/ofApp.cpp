@@ -11,7 +11,7 @@ void ofApp::setup(){
 
     ofSetFrameRate(FRAME_RATE);
     
-    std::string eyeDBPath  = ofToDataPath("pouyan_eyedata.db", true);
+    std::string eyeDBPath  = ofToDataPath("matti_eyedata.db", true);
 
     try {
 
@@ -35,7 +35,7 @@ void ofApp::setup(){
 
     std::cout << "EYE Samples per frame: " << _eyePerFrame << ". Last frame: " << _eyePerLastFrame << endl;
 
-    _nowRecording = true;
+    _nowRecording = false;
 
     if(_nowRecording) {
         
@@ -56,8 +56,8 @@ void ofApp::setup(){
         // Start recording
         vidRecorder.start();
     }
-    _player.load("/run/media/avnerus/66220716265174D3/Facebook Piot Experiment/Video/pilotexp.mp4");
-    _player.load("/Volumes/Store/Avner/POUYAN-BRAIN/pouyan_cropped.mp4");
+    //_player.load("/run/media/avnerus/66220716265174D3/Facebook Piot Experiment/Video/pilotexp.mp4");
+    _player.load("/Volumes/Store/Avner/MATTI-BRAIN/matti_session_cropped.mp4");
     
     _player.play();
 

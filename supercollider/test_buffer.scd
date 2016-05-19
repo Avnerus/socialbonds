@@ -51,11 +51,11 @@ SynthDef(\lppclick, {
 
     var subosc, subenv, suboutput, clickosc, clickenv, clickoutput;
 
-    subosc = {SinOsc.ar(50,1,0.5)};
+    subosc = {SinOsc.ar(60,1,0.5)};
     subenv = {Line.ar(1, 0, 0.05, doneAction: 2)};
 
-	clickosc = {LPF.ar(WhiteNoise.ar(1),100,1,0.5)};
-    clickenv = {Line.ar(1, 0, 0.02)};
+	clickosc = {LPF.ar(WhiteNoise.ar(1),100,1,0)};
+    clickenv = {Line.ar(1, 0, 0.01)};
 
     suboutput = (subosc * subenv);
     clickoutput = (clickosc * clickenv);
@@ -74,6 +74,9 @@ o = OSCFunc({ arg msg;
 )
 
 c.free()
+
+Synth(\lppclick)
+
 
 
 d.plot()

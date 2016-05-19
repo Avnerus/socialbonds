@@ -19,14 +19,15 @@ class ofApp : public ofBaseApp {
         const int WIDTH = 5120;
         const int HEIGHT = 2880;
         
-        //const int WIDTH = 1920;
-        //const int HEIGHT = 1080;
+       // const int WIDTH = 1920;
+       // const int HEIGHT = 1080;
         
         const int REC_SAMPLE_RATE  = 44100;
         const int REC_CHANNELS = 2;
 
         //const float LPP_THRESHOLD = 0.000710264; POUYAN
-        const float LPP_THRESHOLD = 0.00096785915213;
+        //const float LPP_THRESHOLD = 0.00096785915213;
+        const float LPP_THRESHOLD = 0.00029921558638;
 
         //const float LPP_THRESHOLD = 0.000564972;
 
