@@ -1,4 +1,6 @@
 ofxHistoryPlot
+ofxNetwork
+ofxNetworkSync
 ofxOsc
 ofxSQLiteCpp
 ofxVideoRecorder

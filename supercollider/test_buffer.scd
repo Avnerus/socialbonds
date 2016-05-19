@@ -78,6 +78,13 @@ c.free()
 
 d.plot()
 
+s.options.sampleRate = 48000;
+Server.killAll
+//Server.default.options.outDevice_("HDMI")
+Server.default.options.outDevice_("M-Track Plus")
+
+s.reboot;
+
 
 //{PinkNoise.ar(Decay2.ar(Impulse.ar(10,0,0.2),0.0005,0.2))!2}.play()
 //{PinkNoise.ar(Decay2.ar(Impulse.ar(10,0,0.2),0.0005,0.2))!2}.play()\

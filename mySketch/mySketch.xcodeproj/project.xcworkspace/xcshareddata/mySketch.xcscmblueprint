@@ -4,16 +4,18 @@
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "A5A4285D2F6B7A4B860C34CF3CA994E2BA6F338D" : 0,
     "4131F34236DEB94090351DE98CD44A123F2873AB" : 0,
     "E81A77933AFC2C2569CCA3E5B22E9EEE7CC14B2F" : 0,
     "A82C0ABFD7ACBB96A8DACF462A005A3A654155C7" : 0,
     "D7BD5E50F1992067E519EC37976C7921CC13709E" : 0
   },
-  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "DADB700F-4DF5-4586-84BA-1872DA15E62D",
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "741DCCC5-BFD8-4C6C-8401-F4BF95D40D82",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "4131F34236DEB94090351DE98CD44A123F2873AB" : "..\/of_v0.9.3_osx_release\/addons\/ofxVideoRecorder",
-    "E81A77933AFC2C2569CCA3E5B22E9EEE7CC14B2F" : "..\/of_v0.9.3_osx_release\/addons\/ofxHistoryPlot",
-    "A82C0ABFD7ACBB96A8DACF462A005A3A654155C7" : "..\/of_v0.9.3_osx_release\/addons\/ofxSQLiteCpp",
+    "A5A4285D2F6B7A4B860C34CF3CA994E2BA6F338D" : "..\/Code\/of_v0.9.3_osx_release\/addons\/ofxNetworkSync",
+    "4131F34236DEB94090351DE98CD44A123F2873AB" : "..\/Code\/of_v0.9.3_osx_release\/addons\/ofxVideoRecorder",
+    "E81A77933AFC2C2569CCA3E5B22E9EEE7CC14B2F" : "..\/Code\/of_v0.9.3_osx_release\/addons\/ofxHistoryPlot",
+    "A82C0ABFD7ACBB96A8DACF462A005A3A654155C7" : "..\/Code\/of_v0.9.3_osx_release\/addons\/ofxSQLiteCpp",
     "D7BD5E50F1992067E519EC37976C7921CC13709E" : "socialbonds\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "mySketch",
@@ -26,17 +28,22 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4131F34236DEB94090351DE98CD44A123F2873AB"
     },
     {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/anagma\/ofxNetworkSync",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A5A4285D2F6B7A4B860C34CF3CA994E2BA6F338D"
+    },
+    {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/bakercp\/ofxSQLiteCpp",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A82C0ABFD7ACBB96A8DACF462A005A3A654155C7"
     },
     {
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/avnerus\/socialbonds",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Avnerus\/socialbonds",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D7BD5E50F1992067E519EC37976C7921CC13709E"
     },
     {
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/armadillu\/ofxHistoryPlot",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/avnerus\/ofxHistoryPlot",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E81A77933AFC2C2569CCA3E5B22E9EEE7CC14B2F"
     }
