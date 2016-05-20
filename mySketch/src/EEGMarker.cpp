@@ -29,7 +29,9 @@ void EEGMarker::setup(ofApp* app, double value) {
     // std::cout << "EEG Marker created!" << std::endl;
 
     _money = value * 1000;
-    _labelHeight = ofRandom(50,_app->HEIGHT - 50);
+    _labelHeight = ofRandom(200,_app->HEIGHT - 50);
+    //_labelHeight = app->HEIGHT / 2;
+    _labelAlpha = 255;
     finished = false;
 }
 
@@ -43,8 +45,10 @@ void EEGMarker::draw() {
 
     // Draw money
     std::string label = std::string("$") + ofToString(_money, 5);
-    ofSetColor(255,255,255);
-    _app->getFont()->drawString(label, _x + (_width / 2), _labelHeight);
+    ofSetColor(255,255,255,_labelAlpha);
+
+    //_app->getFont()->drawString(label, _x - 200 + (_width / 2), _labelHeight);
+    _app->getFont()->drawString(label, _x - 200 , _labelHeight);
 }
 
 void EEGMarker::update(double value) {
@@ -55,6 +59,7 @@ void EEGMarker::update(double value) {
     _firstVertexIndex -= (_app->getNumberOfSamplesPerFrame() - 1);
     if (value == 0) {
         _lastVertexIndex -= (_app->getNumberOfSamplesPerFrame() - 1);
+        _labelAlpha -= 5;
     }
 
     if (_firstVertexIndex < 0) {
@@ -81,6 +86,8 @@ void EEGMarker::update(double value) {
             _width = _lastX - _x;
         }
     }
+
+    _labelHeight -= 10;
 }
 
 

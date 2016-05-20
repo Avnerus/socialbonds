@@ -33,6 +33,7 @@ private:
     ofMatrix4x4 _meshMatrix;
     double _money;
     float _labelHeight;
+    int _labelAlpha;
 
     ofColor _markerColor;
     ofColor _markerFilling;
