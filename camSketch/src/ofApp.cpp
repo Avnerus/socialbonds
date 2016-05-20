@@ -1,5 +1,16 @@
 #include "ofApp.h"
 
+ofApp::ofApp() {
+    bool parsingSuccessful = _config.open("config.json");
+    if (parsingSuccessful) {
+        ofLogNotice("ofApp::setup") << _config.getRawString() << std::endl;
+        HEIGHT = _config["height"].asInt();
+        WIDTH = _config["width"].asInt();
+        FULLSCREEN = _config["fullscreen"].asInt();
+    } else {
+        ofLogError("ofApp::setup") << "Failed to parse JSON config" << std::endl;
+    }
+}
 //--------------------------------------------------------------
 void ofApp::setup(){
 
@@ -58,7 +69,7 @@ void ofApp::draw(){
         ofSetColor(255,255,255);
         ofDrawRectangle(WIDTH / 2 - 100, HEIGHT / 2 - 100, 200, 200);
     } else {
-        _player.draw(0, 0);
+        _player.draw(0, 0, WIDTH, HEIGHT);
     }
 }
 

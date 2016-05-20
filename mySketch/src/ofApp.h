@@ -31,6 +31,8 @@ class ofApp : public ofBaseApp {
         
         int WIDTH = 1920;
         int HEIGHT = 1080;
+
+        int FULLSCREEN = 0;
         
         const int REC_SAMPLE_RATE  = 44100;
         const int REC_CHANNELS = 2;

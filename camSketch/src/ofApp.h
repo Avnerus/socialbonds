@@ -1,9 +1,8 @@
 #pragma once
 #include "ofxNetworkSync.h"
+#include "ofxJSON.h"
 
 const int FRAME_RATE = 8;
-const int WIDTH = 1280;
-const int HEIGHT = 960;
 
 #include "ofMain.h"
 
@@ -15,6 +14,12 @@ enum State {
 class ofApp : public ofBaseApp{
 
     public:
+        int WIDTH = 1280;
+        int HEIGHT = 960;
+        int FULLSCREEN = 0;
+
+        ofApp();
+
         void setup();
         void update();
         void draw();
@@ -39,6 +44,8 @@ class ofApp : public ofBaseApp{
         void reset();
 
     private:
+
+        ofxJSONElement _config;
 
         ofVideoPlayer _player;
 

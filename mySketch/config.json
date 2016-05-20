@@ -3,5 +3,6 @@
     "startOffsetSec" : 60,
     "width" : 5120,
     "height": 2880,
-    "endTimeSec": 2400
+    "endTimeSec": 2400,
+    "fullscreen": 1
 }

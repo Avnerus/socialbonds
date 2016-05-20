@@ -1,3 +1,4 @@
+ofxJSON
 ofxNetwork
 ofxNetworkSync
 ofxSQLiteCpp

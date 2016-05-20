@@ -2,13 +2,13 @@
 #include "SQLiteCpp.h"
 #include "ofxVideoRecorder.h"
 #include "ofxNetworkSync.h"
+#include "ofxJSON.h"
+
+
+#include "ofMain.h"
 
 const int FRAME_RATE = 25;
 const int EYE_RATE = 500;
-const int WIDTH = 1920;
-const int HEIGHT = 1200;
-
-#include "ofMain.h"
 
 enum State {
     RUNNING,
@@ -18,6 +18,12 @@ enum State {
 class ofApp : public ofBaseApp{
 
 	public:
+        int WIDTH = 1920;
+        int HEIGHT = 1200;
+        int FULLSCREEN = 0;
+        
+        ofApp();
+
 		void setup();
 		void update();
 		void draw();
@@ -45,6 +51,8 @@ class ofApp : public ofBaseApp{
 
     private:
 
+        ofxJSONElement _config;
+
         ofVideoPlayer _player;
         ofxVideoRecorder vidRecorder;
         bool _nowRecording;
@@ -63,6 +71,9 @@ class ofApp : public ofBaseApp{
 
         ofxNetworkSyncServerFinder _finder;
         ofxNetworkSyncClient _client;
+
+        float _xScale;
+        float _yScale;
 
         State _appState;
         uint64_t _startTime;

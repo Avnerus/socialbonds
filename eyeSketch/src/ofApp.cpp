@@ -1,5 +1,17 @@
 #include "ofApp.h"
 
+ofApp::ofApp() {
+    bool parsingSuccessful = _config.open("config.json");
+    if (parsingSuccessful) {
+        ofLogNotice("ofApp::setup") << _config.getRawString() << std::endl;
+        HEIGHT = _config["height"].asInt();
+        WIDTH = _config["width"].asInt();
+        FULLSCREEN = _config["fullscreen"].asInt();
+    } else {
+        ofLogError("ofApp::setup") << "Failed to parse JSON config" << std::endl;
+    }
+}
+
 //--------------------------------------------------------------
 void ofApp::setup(){
 
@@ -13,6 +25,9 @@ void ofApp::setup(){
     ofSetFrameRate(FRAME_RATE);
     
     std::string eyeDBPath  = ofToDataPath("matti_eyedata.db", true);
+
+    _xScale = (float)(WIDTH) / 1920.0;
+    _yScale = (float)(HEIGHT) / 1200.0;
 
     try {
 
@@ -135,9 +150,9 @@ void ofApp::draw(){
         ofDrawRectangle(WIDTH / 2 - 100, HEIGHT / 2 - 100, 200, 200);
     } else {
         ofSetColor(255,255,255); 
-        _player.draw(0, 0);
+        _player.draw(0, 0, WIDTH, HEIGHT);
         ofSetColor(255,0,0, 150); 
-        ofDrawCircle(_eyeX,_eyeY, 20);
+        ofDrawCircle(_eyeX * _xScale, _eyeY * _yScale, 20 * _xScale);
     }
 
     if (_nowRecording) {

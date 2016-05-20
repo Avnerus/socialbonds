@@ -12,6 +12,7 @@ ofApp::ofApp() {
         WIDTH = _config["width"].asInt();
         START_OFFSET_SEC = _config["startOffsetSec"].asInt();
         SERVER_PORT = _config["serverPort"].asInt();
+        FULLSCREEN = _config["fullscreen"].asInt();
     } else {
         ofLogError("ofApp::setup") << "Failed to parse JSON config" << std::endl;
     }
