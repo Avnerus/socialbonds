@@ -10,6 +10,7 @@
 #include "ofxJSON.h"
 
 class EEGMarker;
+class EEGPlot;
 
 enum State {
     RUNNING,
@@ -28,6 +29,12 @@ class ofApp : public ofBaseApp {
         int SERVER_PORT = 9540;
         int START_OFFSET_SEC = 10;
         int RESTART_TIME_SEC = 3005;
+
+        int PLOT_MARGIN = 20;
+        int PLOT_RIGHT_MARGIN = 50;
+
+        int MONEY_FONT_SIZE = 36;
+        int PLOT_FONT_SIZE = 20;
         
         int WIDTH = 1920;
         int HEIGHT = 1080;
@@ -39,7 +46,7 @@ class ofApp : public ofBaseApp {
 
         //const float LPP_THRESHOLD = 0.000710264; POUYAN
         //const float LPP_THRESHOLD = 0.00096785915213;
-        const float LPP_THRESHOLD = 0.00029921558638;
+        double LPP_THRESHOLD = 0.00029921558638;
 
         //const float LPP_THRESHOLD = 0.000564972;
         //

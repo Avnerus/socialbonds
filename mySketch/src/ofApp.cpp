@@ -13,6 +13,11 @@ ofApp::ofApp() {
         START_OFFSET_SEC = _config["startOffsetSec"].asInt();
         SERVER_PORT = _config["serverPort"].asInt();
         FULLSCREEN = _config["fullscreen"].asInt();
+        LPP_THRESHOLD = _config["lppThreshold"].asDouble();
+        PLOT_MARGIN = _config["plotMargin"].asInt();
+        PLOT_RIGHT_MARGIN = _config["plotRightMargin"].asInt();
+        MONEY_FONT_SIZE = _config["moneyFontSize"].asInt();
+        PLOT_FONT_SIZE = _config["plotFontSize"].asInt();
     } else {
         ofLogError("ofApp::setup") << "Failed to parse JSON config" << std::endl;
     }
@@ -31,7 +36,7 @@ void ofApp::setup(){
 
     ofSetFrameRate(FRAME_RATE);
 
-    _font.load("Verdana.ttf", 36);
+    _font.load("Verdana.ttf", MONEY_FONT_SIZE);
 
     _appState = PREPARING;
 
@@ -65,7 +70,7 @@ void ofApp::setup(){
     }
 
     _eegPlot = new EEGPlot();
-    _eegPlot->setup();
+    _eegPlot->setup(this);
     
     _eegSound = new EEGSound();
     _eegSound->setup();
@@ -223,7 +228,7 @@ void ofApp::draw(){
         ofDrawRectangle(WIDTH / 2 - 100, HEIGHT / 2 - 100, 200, 200);
     } else {
         ofSetColor(0,0,0);
-        ofDrawRectangle(WIDTH - 60, 0, 60, HEIGHT);
+        ofDrawRectangle(WIDTH - PLOT_RIGHT_MARGIN, 0, PLOT_RIGHT_MARGIN, HEIGHT);
 
         _cam.begin();
         _eegPlot->draw(0, 0, WIDTH, HEIGHT);

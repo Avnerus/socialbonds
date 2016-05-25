@@ -23,7 +23,7 @@ void EEGMarker::setup(ofApp* app, double value) {
     ofVec3f worldVertex   = _app->getEEGPlot()->getChannelPlotMesh(0)->getVertex(_firstVertexIndex);
     ofVec3f screenVertex  = _app->getCamera()->worldToScreen(worldVertex);
     screenVertex = screenVertex * _meshMatrix;
-    _x = _lastX = screenVertex.x - 50;
+    _x = _lastX = screenVertex.x - _app->PLOT_RIGHT_MARGIN;
     _width = 0;
 
     // std::cout << "EEG Marker created!" << std::endl;

@@ -1,6 +1,7 @@
 #pragma once
 #include "ofMain.h"
 #include "ofxHistoryPlot.h"
+#include "ofApp.h"
 
 struct Channel {
     ofxHistoryPlot* plot;
@@ -8,9 +9,11 @@ struct Channel {
     int y;
 };
 
+class ofApp;
+
 class EEGPlot {
     public:
-        void setup();
+        void setup(ofApp* app);
         void update(int index, float value);
         void draw(int x, int y, int width, int height);
         void appendChannel(std::string name);
@@ -24,4 +27,7 @@ class EEGPlot {
 
         bool mouseIsPressed;
         float currentFrameRate;
+
+    private:
+        ofApp* _app;
 };

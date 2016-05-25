@@ -4,5 +4,10 @@
     "width" : 5120,
     "height": 2880,
     "endTimeSec": 2400,
-    "fullscreen": 1
+    "fullscreen": 1,
+    "lppThreshold": 0.00035,
+    "plotMargin": 20,
+    "plotRightMargin" : 40,
+    "moneyFontSize" : 36,
+    "plotFontSize" : 20
 }
