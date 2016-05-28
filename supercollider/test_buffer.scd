@@ -13,9 +13,11 @@ o = OSCFunc({ arg msg;
 (
 SynthDef(\oscplayer,{ arg out = 0, bufnum;
 	var signal, subosc;
-//signal = Osc.ar(bufnum, MouseX.kr(60,300)); // mouse x to control pitch
+signal = Osc.ar(bufnum, MouseX.kr(60,300)); // mouse x to control pitch
 //	signal = Osc.ar(bufnum, 125.32056);
-	signal = Osc.ar(bufnum, 72.653688);
+//	signal = Osc.ar(bufnum, 72.653688);
+	signal = Osc.ar(bufnum, 75.802248);
+
 	subosc = {SinOsc.ar(80,1,0.5)};
     Out.ar(0,
 		LPF.ar(
@@ -57,7 +59,7 @@ SynthDef(\lppclick, {
     subosc = {SinOsc.ar(60,1,0.5)};
     subenv = {Line.ar(1, 0, 0.05, doneAction: 2)};
 
-	clickosc = {LPF.ar(WhiteNoise.ar(1),20,1,0)};
+	clickosc = {LPF.ar(WhiteNoise.ar(1),1000,1,0)};
     clickenv = {Line.ar(1, 0, 0.01)};
 
     suboutput = (subosc * subenv);
