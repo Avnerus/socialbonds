@@ -1,6 +1,5 @@
 #pragma once
 #include "SQLiteCpp.h"
-#include "ofxVideoRecorder.h"
 #include "ofxNetworkSync.h"
 #include "ofxJSON.h"
 
@@ -42,8 +41,6 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 
-        void recordingComplete(ofxVideoRecorderOutputFileCompleteEventArgs& args);
-
         void onMessageReceived(string & message);
         void onServerFound(IpAndPort & info);
 
@@ -54,8 +51,6 @@ class ofApp : public ofBaseApp{
         ofxJSONElement _config;
 
         ofVideoPlayer _player;
-        ofxVideoRecorder vidRecorder;
-        bool _nowRecording;
         ofFbo _rgbFbo;
         ofPixels _pix;
 

@@ -2,4 +2,3 @@ ofxJSON
 ofxNetwork
 ofxNetworkSync
 ofxSQLiteCpp
-ofxVideoRecorder

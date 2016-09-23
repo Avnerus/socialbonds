@@ -8,11 +8,11 @@
     "D7BD5E50F1992067E519EC37976C7921CC13709E" : 0,
     "A5A4285D2F6B7A4B860C34CF3CA994E2BA6F338D" : 0
   },
-  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "9ABA0401-8C26-452A-8D72-AF18C9AF5099",
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "B90BC579-28DA-44FF-A7C9-0BEF24355659",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "5DB7C332A3A89035E93556A2A38BF414005BA671" : "..\/of_v0.9.3_osx_release\/addons\/ofxJSON",
+    "5DB7C332A3A89035E93556A2A38BF414005BA671" : "..\/Code\/of_v0.9.3_osx_release\/addons\/ofxJSON",
     "D7BD5E50F1992067E519EC37976C7921CC13709E" : "socialbonds\/",
-    "A5A4285D2F6B7A4B860C34CF3CA994E2BA6F338D" : "..\/of_v0.9.3_osx_release\/addons\/ofxNetworkSync"
+    "A5A4285D2F6B7A4B860C34CF3CA994E2BA6F338D" : "..\/Code\/of_v0.9.3_osx_release\/addons\/ofxNetworkSync"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "camSketch",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
@@ -29,7 +29,7 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A5A4285D2F6B7A4B860C34CF3CA994E2BA6F338D"
     },
     {
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/avnerus\/socialbonds",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Avnerus\/socialbonds",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D7BD5E50F1992067E519EC37976C7921CC13709E"
     }
