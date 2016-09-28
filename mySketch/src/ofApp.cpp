@@ -117,7 +117,7 @@ void ofApp::update(){
                         _eegPlot->update(channel,value * 5000.0);
                         _eegSound->update(channel,value * 5000.0);
                     }
-                    double lpp = _query->getColumn(1); // Last column is LPP
+                    double lpp = _query->getColumn(11); // Last column is LPP
                     //std::cout << lpp << std::endl;
                     if (lpp > LPP_THRESHOLD) {
                         thresholdPassed = true;
@@ -166,6 +166,8 @@ void ofApp::update(){
             }
             
             _markers.erase( std::remove_if(_markers.begin(), _markers.end(), markerFinished), _markers.end() );
+        
+            //std::cout << "Markers: " << _markers.size() << std::endl;
             
             int lastId = _query->getColumn(0);
             if (lastId >= _eegRestartFrame) {
