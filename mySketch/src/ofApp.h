@@ -5,7 +5,6 @@
 #include "EEGPlot.h"
 #include "EEGSound.h"
 #include "EEGMarker.h"
-#include "ofxVideoRecorder.h"
 #include "ofxNetworkSync.h"
 #include "ofxJSON.h"
 
@@ -73,8 +72,6 @@ class ofApp : public ofBaseApp {
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 
-        void recordingComplete(ofxVideoRecorderOutputFileCompleteEventArgs& args);
-
         int getNumberOfSamplesPerFrame();
         ofTrueTypeFont* getFont();
 
@@ -100,17 +97,11 @@ class ofApp : public ofBaseApp {
         std::vector< std::shared_ptr<EEGMarker> > _markers;
         std::shared_ptr<EEGMarker> _liveMarker;
 
-        ofxVideoRecorder vidRecorder;
-        ofFbo _rgbFbo;
-        ofPixels _pix;
-
         ofEasyCam _cam;
         ofTrueTypeFont _font;
 
         float _eyeX;
         float _eyeY;
-
-        bool _nowRecording;
 
         bool _blink;
 

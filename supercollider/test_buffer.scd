@@ -10,25 +10,39 @@ o = OSCFunc({ arg msg;
 )
 
 
+
 (
 SynthDef(\oscplayer,{ arg out = 0, bufnum;
-	var signal, subosc;
-signal = Osc.ar(bufnum, MouseX.kr(60,300)); // mouse x to control pitch
+	var signal, subosc,mixed;
+
+//	signal = Lag.ar(Osc.ar(bufnum,79.325933),MouseY.kr(0,0.1)); // mouse x to control pitch
+	signal = Osc.ar(bufnum,75.802248); // mouse x to control pitch
+//	signal = Osc.ar(bufnum,	79.325933); // mouse x to control pitch
 //	signal = Osc.ar(bufnum, 125.32056);
 //	signal = Osc.ar(bufnum, 72.653688);
-	signal = Osc.ar(bufnum, 75.802248);
+//	signal = Osc.ar(bufnum, 75.802248,MouseX.kr(-30,30)));
+	//signal = Osc.ar(bufnum, MouseY.kr(50,100),MouseX.kr(-30,30));
+//	Osc.ar(bufnum, XLine.kr(2000,200), 0, 0.5)// modulate freq
+
+	//signal = Osc.ar(bufnum, SinOsc.kr(80,0,10,MouseX.kr(50,80)));
 
 	subosc = {SinOsc.ar(80,1,0.5)};
+	//mixed = {SinOsc.ar(Osc.ar(bufnum, MouseX.kr(60,300),0,2000,80),0,0.5)};
     Out.ar(0,
 		LPF.ar(
 			Pan2.ar(subosc + signal),	// the source to be filtered
 			2000		// control the filter frequency with a line
 		,1,0.6)
     )
-}).add
+}).send(s)
 )
 
-{MouseX.kr.poll}.play
+
+a = Synth(\oscplayer, [\bufnum, b.bufnum])
+a.free();
+
+{MouseX.kr.poll}.play();
+{MouseY.kr.poll}.play();
 
 var h;
 h = Signal.hanningWindow(2048).asWavetable;
@@ -47,8 +61,7 @@ SynthDef(\oscplayer2,{ arg out = 0, bufnum;
 
 b.plot()
 
-a = Synth(\oscplayer, [\bufnum, b.bufnum])
-a.free();
+
 
 
 (
@@ -59,7 +72,7 @@ SynthDef(\lppclick, {
     subosc = {SinOsc.ar(60,1,0.5)};
     subenv = {Line.ar(1, 0, 0.05, doneAction: 2)};
 
-	clickosc = {LPF.ar(WhiteNoise.ar(1),1000,1,0)};
+	clickosc = {LPF.ar(WhiteNoise.ar(1),800,1,0)};
     clickenv = {Line.ar(1, 0, 0.01)};
 
     suboutput = (subosc * subenv);
