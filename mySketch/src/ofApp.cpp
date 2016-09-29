@@ -180,7 +180,7 @@ void ofApp::update(){
 
     }
     catch (std::exception& e) {
-        ofLogError() << "RESTARTING DUE TO EXCEPTION: " << e.what() << std::endl;
+        ofLogError() << "RESTARTING DUE TO EXCEPTION (Update): " << e.what() << std::endl;
         restart();
     }
 }
@@ -195,24 +195,29 @@ ofTrueTypeFont* ofApp::getFont() {
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-
-    if (_appState == PREPARING) {
-        ofSetColor(255,255,255);
-        ofDrawRectangle(WIDTH / 2 - 100, HEIGHT / 2 - 100, 200, 200);
-    } else {
-        ofSetColor(0,0,0);
-        ofDrawRectangle(WIDTH - PLOT_RIGHT_MARGIN, 0, PLOT_RIGHT_MARGIN, HEIGHT);
-
-        _cam.begin();
-        _eegPlot->draw(0, 0, WIDTH, HEIGHT);
-        _cam.end();
-
-        for (auto & marker : _markers) {
-            if (!marker->finished) {
-                marker->draw();
-            } 
+    try {
+        if (_appState == PREPARING) {
+            ofSetColor(255,255,255);
+            ofDrawRectangle(WIDTH / 2 - 100, HEIGHT / 2 - 100, 200, 200);
+        } else {
+            ofSetColor(0,0,0);
+            ofDrawRectangle(WIDTH - PLOT_RIGHT_MARGIN, 0, PLOT_RIGHT_MARGIN, HEIGHT);
+            
+            _cam.begin();
+            _eegPlot->draw(0, 0, WIDTH, HEIGHT);
+            _cam.end();
+            
+            for (auto & marker : _markers) {
+                if (!marker->finished) {
+                    marker->draw();
+                } 
+            }
+            
         }
-
+    }
+    catch (std::exception& e) {
+        ofLogError() << "RESTARTING DUE TO EXCEPTION (Draw): " << e.what() << std::endl;
+        restart();
     }
 }
 
