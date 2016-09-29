@@ -14,7 +14,8 @@ ofApp::ofApp() {
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-
+    
+    ofLogToFile("log.txt");
     ofEnableAlphaBlending();
     ofEnableSmoothing();
     ofSetBackgroundColor(0,0,0);
@@ -40,7 +41,7 @@ void ofApp::setup(){
         _query = std::make_shared<SQLite::Statement>(*(_eyeDB), "SELECT * from data LIMIT 1");
         _query->executeStep();
         _firstOnset = _query->getColumn(0);
-        std::cout << "First onset of eye data " << _firstOnset << std::endl;
+        ofLogNotice() << "First onset of eye data " << _firstOnset << std::endl;
 
     }
 
@@ -51,7 +52,7 @@ void ofApp::setup(){
     _eyePerFrame = EYE_RATE / FRAME_RATE;
     _eyePerLastFrame = EYE_RATE / FRAME_RATE + (EYE_RATE % FRAME_RATE);
 
-    std::cout << "EYE Samples per frame: " << _eyePerFrame << ". Last frame: " << _eyePerLastFrame << endl;
+    ofLogNotice() << "EYE Samples per frame: " << _eyePerFrame << ". Last frame: " << _eyePerLastFrame << std::endl;
 
     //_player.load("/run/media/avnerus/66220716265174D3/Facebook Piot Experiment/Video/pilotexp.mp4");
     _player.load("matti_session_cropped.mp4");
@@ -70,10 +71,10 @@ void ofApp::update(){
 
 	if(_finder.isRunning() && _finder.doesServerFound()){
 		_finder.close();
-        std::cout << "Found server at " << _finder.getServerInfo().ip << ". Setting up client. " << std::endl;
+        ofLogNotice() << "Found server at " << _finder.getServerInfo().ip << ". Setting up client. " << std::endl;
 		if(_client.setup(_finder.getServerInfo().ip, _finder.getServerInfo().port)){
 			ofAddListener(_client.messageReceived, this, &ofApp::onMessageReceived);
-            std::cout << "Client connected" << std::endl;
+            ofLogNotice() << "Client connected" << std::endl;
 		} else {
 			ofLogError() << "failed to start client";
 		}
@@ -81,7 +82,7 @@ void ofApp::update(){
 
     if (_appState == PREPARING) {
         if (_startTime > 0 && ofGetElapsedTimeMillis() >= _startTime) {
-            std::cout << "START!" << std::endl;
+            ofLogNotice() << "START!" << std::endl;
             _appState = RUNNING;
             _player.play();
         }
@@ -95,11 +96,16 @@ void ofApp::update(){
 
 
         for (int i = 0; i < numToRead && !_queryDone; i++) {
-            if (_query->executeStep()) {
-                _eyeX = _query->getColumn(1);
-                _eyeY = _query->getColumn(2);
-            } else {
-                _queryDone = true;
+            try {
+                if (_query->executeStep()) {
+                    _eyeX = _query->getColumn(1);
+                    _eyeY = _query->getColumn(2);
+                } else {
+                    _queryDone = true;
+                }
+            }
+            catch (std::exception& e) {
+                ofLogError() << "EXCEPTIION OCCURED : " << e.what();
             }
         }
         _player.update();
@@ -122,11 +128,11 @@ void ofApp::draw(){
 }
 
 void ofApp::reset() {
-    std::cout << "Performing RESET" << std::endl;
+    ofLogNotice() << "Performing RESET" << std::endl;
     _appState = PREPARING;
     _player.setPaused(true);
     std::string resetQuery  = "SELECT * from data WHERE onset >= " + ofToString(_firstOnset + _offsetSec * 1000); // Onset is in milliseconds
-    std::cout << resetQuery << std::endl;
+    ofLogNotice() << resetQuery << std::endl;
     _query = std::make_shared<SQLite::Statement>(*(_eyeDB), resetQuery);
     _player.setFrame(_offsetSec * FRAME_RATE);
     _queryDone = false;
@@ -137,13 +143,12 @@ void ofApp::onMessageReceived(string & message){
 	const string messagePlay = "PLAY ";
 	if(message.find(messagePlay) == 0 && _client.isCalibrated()){
         std::string args = message.substr(messagePlay.length());
-        std::cout << args << std::endl;
         std::size_t commaPos = args.find(',');
         int time = ofToInt(args.substr(0,commaPos));
         _offsetSec = ofToInt(args.substr(commaPos + 1));
         _startTime =  ofGetElapsedTimeMillis() + (time - _client.getSyncedElapsedTimeMillis());
 
-        std::cout << "Start time: " << _startTime << " Offset: " << _offsetSec << std::endl;
+        ofLogNotice() << "Start time: " << _startTime << " Offset: " << _offsetSec << std::endl;
 
         reset();
 	}
@@ -203,7 +208,7 @@ void ofApp::dragEvent(ofDragInfo dragInfo){
 }
 
 void ofApp::exit(){
-    std::cout << "EXIT" << std::endl;
-
+    ofLogToConsole();
+    ofLogNotice() << "EXIT" << std::endl;
 }
 
