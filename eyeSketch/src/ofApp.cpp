@@ -55,14 +55,12 @@ void ofApp::setup(){
     ofLogNotice() << "EYE Samples per frame: " << _eyePerFrame << ". Last frame: " << _eyePerLastFrame << std::endl;
 
     //_player.load("/run/media/avnerus/66220716265174D3/Facebook Piot Experiment/Video/pilotexp.mp4");
-    _player.load("matti_session_cropped.mp4");
+    _player.load("matti_session_trimmed.mp4");
     _finder.setup();
 
     _appState = PREPARING;
 
     _startTime = 0;
-    
-
 }
 
 //--------------------------------------------------------------
@@ -87,13 +85,8 @@ void ofApp::update(){
             _player.play();
         }
     } 
-    if (_appState == RUNNING) {
+    else if (_appState == RUNNING) {
         int numToRead = _eyePerFrame;
-
-        if (ofGetFrameNum() % 59 == 0) {
-            numToRead = _eyePerLastFrame;
-        }
-
 
         for (int i = 0; i < numToRead && !_queryDone; i++) {
             try {
@@ -105,10 +98,15 @@ void ofApp::update(){
                 }
             }
             catch (std::exception& e) {
-                ofLogError() << "EXCEPTIION OCCURED : " << e.what();
+                ofLogError() << "EYE DB EXCEPTIION OCCURED : " << e.what();
             }
         }
-        _player.update();
+        try {
+            _player.update();
+        }
+        catch (std::exception& e) {
+            ofLogError() << "PLAYER EXCEPTIION OCCURED : " << e.what();
+        }
     }
 
 }
@@ -130,11 +128,13 @@ void ofApp::draw(){
 void ofApp::reset() {
     ofLogNotice() << "Performing RESET" << std::endl;
     _appState = PREPARING;
-    _player.setPaused(true);
+    _player.stop();
     std::string resetQuery  = "SELECT * from data WHERE onset >= " + ofToString(_firstOnset + _offsetSec * 1000); // Onset is in milliseconds
     ofLogNotice() << resetQuery << std::endl;
     _query = std::make_shared<SQLite::Statement>(*(_eyeDB), resetQuery);
-    _player.setFrame(_offsetSec * FRAME_RATE);
+    //ofLogNotice() << "Starting in frame " << (_offsetSec * FRAME_RATE) << std::endl;
+    //_player.setFrame(_offsetSec * FRAME_RATE);
+    ofLogNotice() << "Starting in frame 0" << (_offsetSec * FRAME_RATE) << std::endl;
     _queryDone = false;
 }
 

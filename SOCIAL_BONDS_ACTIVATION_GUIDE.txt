@@ -1,0 +1,39 @@
+SOCIAL BONDS - Activation
+=========================
+
+1. Turn on the projector
+2. Turn on MacMini #1 - Check that 2 programs are up:
+    A. mySketch - Showing a white square in the middle of a full black screen. 
+            In case it does not show up on the full screen: Press ESC, start it again.
+    B. Supercollider
+    
+3. Turn on MacMini #2 
+4. Run camSketch, drag the window to the rightmost (smaller) screen. Choose Window->Fullscreen.
+5. Run eyeSketch, drag the window to the left screen. Choose Window->Fullscreen.
+6. On MacMini #1 - Press "P".
+
+
+Troubleshooting
+----------------
+
+1. "P" - Didn't start the other screens:
+    A. Make sure that you started mySketch _before_ starting eyeSketch and camSketch.
+    
+    B. When closing mySketch, one has to wait 1-2 minutes before starting it again, otherwise an error 
+    might appear. Check data/log.txt, if it says something about port 9540 already bound, wait 2
+    more minutes and then start it again.
+    
+    C. You can also check data/log.txt in camSketch and eyeSketch to see that they were connected 
+    to the server.
+    
+2. mySketch is not full screen - Press ESC, wait 2 minutes, and start it gain. Then start eyeSketch and camSketch 
+again.
+
+3. One of the applications crashed (hopefully won't happen!) - Click to get the report with the full details
+and stack trace, copy it and send it to Avner. Then restart the application. If it was mySketch that crashed, 
+the other sketches need to be restarted as well.
+
+
+/Avner
+avnerus@gmail.com
++358449658244

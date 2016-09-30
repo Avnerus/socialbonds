@@ -234,16 +234,16 @@ void ofApp::reset() {
 }
 
 void ofApp::restart() {
-    _startTime = ofGetElapsedTimeMillis() + 2000;
+    _startTime = ofGetElapsedTimeMillis() + 5000;
     _appState = PREPARING;
     reset();
 
-    ofLogNotice() << "Sending PLAY message" << std::endl;
+    ofLogNotice() << "Sending PLAY message. Start time: " << _startTime << std::endl;
     // Start presentation
     for (auto & client : _server.getClients()) {
         ofLogNotice() << client->isCalibrated() << std::endl;
         if(client->isCalibrated()){
-            client->send("PLAY "+ofToString(ofGetElapsedTimeMillis()+2000) + "," + ofToString(START_OFFSET_SEC));
+            client->send("PLAY "+ofToString(_startTime) + "," + ofToString(START_OFFSET_SEC));
             ofLogNotice() << "Send to client " << client->getClientID() << std::endl;
         }
     }
